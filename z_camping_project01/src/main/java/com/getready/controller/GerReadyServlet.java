@@ -1,11 +1,14 @@
 package com.getready.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.getready.controller.action.Action;
 
 /**
  * Servlet implementation class GerReadyServlet
@@ -27,8 +30,14 @@ public class GerReadyServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String command = request.getParameter("command");
-		System.out.println(command);
-	
+		System.out.println("GetReadyServlet 에서 요청 받음 확인" + command);
+		
+		ActionFactory af = ActionFactory.getInstance();
+		Action action = af.getAction(command);
+		
+		if(action != null) {
+			action.execute(request, response);
+		}
 	}
 
 	/**
