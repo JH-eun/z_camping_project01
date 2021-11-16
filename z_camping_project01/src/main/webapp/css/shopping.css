@@ -194,6 +194,8 @@ div#front{
 
 #sub_img {
 	text-align: center;
+	width: 250px;
+	height: 150px;
 }
 
 #sub_img img {
