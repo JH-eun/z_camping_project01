@@ -11,7 +11,7 @@ import com.getready.dao.ProductDAO;
 import com.getready.dto.ProductVO;
 
 public class ProductDetailAction implements Action{
-
+//수
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "product/productDetail.jsp";
