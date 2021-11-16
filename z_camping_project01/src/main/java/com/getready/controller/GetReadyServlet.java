@@ -13,7 +13,7 @@ import com.getready.controller.action.Action;
 /**
  * Servlet implementation class GerReadyServlet
  */
-@WebServlet("/GerReadyServlet")
+@WebServlet("/GetReadyServlet")
 public class GetReadyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

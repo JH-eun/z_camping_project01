@@ -39,9 +39,9 @@
 				<li></li>
 				<li><a href="GetReadyServlet?command=cart_list">CART</a></li>
 				<li></li>
-				<li><a href="GetReradyServlet?command=mypage">MY PAGE</a></li>
+				<li><a href="GetReadyServlet?command=mypage">MY PAGE</a></li>
 				<li></li>
-				<li><a href="GetReradyServlet?command=qna_list">Q&amp;A(1:1)</a></li>
+				<li><a href="GetReadyServlet?command=qna_list">Q&amp;A(1:1)</a></li>
 			</ul>
 		</nav>
 		
