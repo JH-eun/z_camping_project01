@@ -14,13 +14,13 @@ import com.getready.controller.action.Action;
  * Servlet implementation class GerReadyServlet
  */
 @WebServlet("/GerReadyServlet")
-public class GerReadyServlet extends HttpServlet {
+public class GetReadyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public GerReadyServlet() {
+    public GetReadyServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
