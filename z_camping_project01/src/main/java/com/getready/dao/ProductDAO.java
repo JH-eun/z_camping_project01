@@ -124,7 +124,7 @@ public class ProductDAO {
 	
 	public ArrayList<ProductVO> listKindProduct(String kind){
 		ArrayList<ProductVO> productList = new ArrayList<ProductVO>();
-		String sql = "select * from product where kink=?";
+		String sql = "select * from product where kind=?";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
