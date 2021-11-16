@@ -1,6 +1,7 @@
 package com.getready.controller.action;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,22 +11,20 @@ import javax.servlet.http.HttpServletResponse;
 import com.getready.dao.ProductDAO;
 import com.getready.dto.ProductVO;
 
-public class ProductDetailAction implements Action{
-//수정 안올라가져서 다시함
+public class ProductKindAction implements Action{
+
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "product/productDetail.jsp";
+		String url = "product/productKind.jsp";
 		
-		String pnum = request.getParameter("pnum").trim();
+		String kind = request.getParameter("kind").trim();
 		
 		ProductDAO productDAO = ProductDAO.getInstance();
-		ProductVO productVO = productDAO.getProduct(pnum);
+		ArrayList<ProductVO> productKindList = productDAO.listKindProduct(kind);
 		
-		request.setAttribute("productVO", productVO);
-		
+		request.setAttribute("productKindList", productKindList);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
-		
 	}
 	
 }
