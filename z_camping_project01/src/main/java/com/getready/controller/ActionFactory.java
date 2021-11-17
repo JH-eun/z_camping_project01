@@ -19,7 +19,7 @@ public class ActionFactory {
 
 		if (command.equals("index")) {
 			action = new IndexAction();
-		} else if (command.equals("product_deatil")) {
+		} else if (command.equals("product_detail")) {
 			action = new ProductDetailAction();
 		} else if(command.equals("catagory")) {
 			action = new ProductKindAction();
