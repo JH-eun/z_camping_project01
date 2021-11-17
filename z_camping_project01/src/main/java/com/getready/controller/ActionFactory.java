@@ -37,8 +37,8 @@ public class ActionFactory {
 			action = new LoginFormAction();
 		} else if (command.equals("login")) {
 			action = new LoginAction();
-		} else if (command.equals("cart_insert")) {
-			action = new CartInsertAction();
+		} else if (command.equals("logout")) {
+			action = new LogoutAction();
 		}
 		return action;
 	}
