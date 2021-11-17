@@ -1,101 +1,104 @@
-body{
-    background-color:#B96DB5;
-    margin:0;
-    padding:0;
-    font-size:0.75em;
+body {
+	background-color: #B96DB5;
+	margin: 0;
+	padding: 0;
+	font-size: 0.75em;
 }
 
-#wrap{
-    width:971px; /* 각 웹 페이지 크기에 맞게 사이즈 조정 */
-    text-align:left;
-    margin:0;
-    margin-right:auto;
-    margin-left:auto;
-    background-color:#B96DB5;
-    background-repeat:repeat-y;    
-    min-height:780px;
+#wrap {
+	width: 971px; /* 각 웹 페이지 크기에 맞게 사이즈 조정 */
+	text-align: left;
+	margin: 0;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #B96DB5;
+	background-repeat: repeat-y;
+	min-height: 780px;
 }
 
-.clear{clear:both;}
-
-#logo{
-    float:left;
-    width:180px;
-    height:100px;
-    margin:40px 0 0 40px;
+.clear {
+	clear: both;
 }
 
-nav#catagory_menu{
-	float:right;
-    margin:20px 64px 0 0;
-    font-family: Arial, Helvetica, sans-serif;
+#logo {
+	float: left;
+	width: 180px;
+	height: 100px;
+	margin: 40px 0 0 40px;
+}
+
+nav#catagory_menu {
+	float: right;
+	margin: 20px 64px 0 0;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 table#cartList {
-    border-collapse:collapse;    /* border 사이의 간격 없앰 */
-    border-top: 2px solid  #333;    
-    border-bottom: 1px solid  #333; 
-    width:100%;                  /* 전체 테이블 길이 설정 */
-    margin-bottom: 20px;
+	border-collapse: collapse; /* border 사이의 간격 없앰 */
+	border-top: 2px solid #333;
+	border-bottom: 1px solid #333;
+	width: 100%; /* 전체 테이블 길이 설정 */
+	margin-bottom: 20px;
 }
 
-table#cartList th, td{	
-    border-bottom: 1px dotted  #333; 
+table#cartList th, td {
+	border-bottom: 1px dotted #333;
 	text-align: center;
 }
 
-nav#catagory_menu ul{
-    list-style:none; 
+nav#catagory_menu ul {
+	list-style: none;
 }
 
-nav#catagory_menu ul li{
-	display:block; 
-    height:30px;
-    float:left;
-    font-family: 굴림;
+nav#catagory_menu ul li {
+	display: block;
+	height: 30px;
+	float: left;
+	font-family: 굴림;
 }
 
-nav#catagory_menu a{
-    text-decoration:none;
-    display:inline-block;
-    width: 80px;
-    text-align: center;
-    color: #CCC;
-    font-weight: bold;
+nav#catagory_menu a {
+	text-decoration: none;
+	display: inline-block;
+	width: 80px;
+	text-align: center;
+	color: #CCC;
+	font-weight: bold;
 }
 
-nav#catagory_menu a:hover{
-    color: #F90;
-    font-weight: bold;
+nav#catagory_menu a:hover {
+	color: #F90;
+	font-weight: bold;
 }
 
-nav#top_menu{
-    margin: 20px 0;
-    float:right;
+nav#top_menu {
+	margin: 20px 0;
+	float: right;
 }
 
-nav#top_menu ul{
-    list-style:none;
-    font-family:Verdana;
-}
-nav#top_menu ul li{
-   float:left;
-   margin:0 15px;  
-   font-size: 14pt; 
+nav#top_menu ul {
+	list-style: none;
+	font-family: Verdana;
 }
 
-nav#top_menu a{
-	display:block; 
-    height:20px;
-    text-decoration:none;
-    color:#fff;
-    padding: 10px;
+nav#top_menu ul li {
+	float: left;
+	margin: 0 15px;
+	font-size: 14pt;
 }
 
-nav#top_menu a:hover{
-    background-image:url(../images/purple.gif);
-    background-repeat:repeat-x;
-    background-position:bottom;
+nav#top_menu a {
+	display: block;
+	height: 20px;
+	text-decoration: none;
+	color: #fff;
+	padding: 10px;
+}
+
+nav#top_menu a:hover {
+	background-image: url(../images/purple.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
 }
 
 article h1, div h1 {
@@ -106,90 +109,92 @@ article h1, div h1 {
 	font-weight: normal;
 }
 
-article h2, div h2{
+article h2, div h2 {
 	font-family: "Times New Roman", Times, serif;
-	font-size: 30px; 
+	font-size: 30px;
 	color: #CCC;
 	padding-bottom: 15px;
-	border-bottom: 1px dotted #666; /* 제목 하단 부에 점선을 넣어 제목이라는 것을 표시해 줍니다. */	
+	border-bottom: 1px dotted #666; /* 제목 하단 부에 점선을 넣어 제목이라는 것을 표시해 줍니다. */
 }
 
-
-#bestProduct{
-    border:solid 1px #FFFFFF;
-    border-radius:10px;
-    width:910px;
-    min-height:260px;
-    background:#ebebeb;
-    padding:10px;
-    text-align: center;    
+#bestProduct {
+	border: solid 1px #FFFFFF;
+	border-radius: 10px;
+	width: 910px;
+	min-height: 260px;
+	background: #ebebeb;
+	padding: 10px;
+	text-align: center;
 }
 
-#kindProduct{
-    border:solid 1px #FFFFFF;
-    border-radius:10px;
-    width:610px;   
-    min-height:900px; 
-    background:#ebebeb;
-    padding:10px;
-    text-align: center;
+#kindProduct {
+	border: solid 1px #FFFFFF;
+	border-radius: 10px;
+	width: 610px;
+	min-height: 900px;
+	background: #ebebeb;
+	padding: 10px;
+	text-align: center;
 }
 
-#item{
-    width:200px;
-    float:left; margin: 0 13px;
-    text-align: center;
+#item {
+	width: 200px;
+	float: left;
+	margin: 0 13px;
+	text-align: center;
 }
 
-#item img{
-	width: 190px; 
-	height : 200px; 
+#item img {
+	width: 190px;
+	height: 200px;
 }
 
-#itemdetail  img{
-	width: 190px; 
-	height : 200px; 
+#itemdetail  img {
+	width: 190px;
+	height: 200px;
 	margin-right: 20px;
 }
 
-a{
-    color:#F00;
-    text-decoration:none;
+a {
+	color: #F00;
+	text-decoration: none;
 }
-a:hover{
-    color:#F90;
-    text-decoration:underline;
+
+a:hover {
+	color: #F90;
+	text-decoration: underline;
 }
 
 #pname {
-	font-size: 20px; 
-	border-bottom: 1px dotted #666; 
-	padding: 5px 0; 
+	font-size: 20px;
+	border-bottom: 1px dotted #666;
+	padding: 5px 0;
 }
 
 footer {
-	margin:10px 0 0 0;
-	height:50px;
+	margin: 10px 0 0 0;
+	height: 50px;
 	background-image: url(../images/under_logo.gif);
 	background-repeat: no-repeat;
-	background-position: 40px center;	
+	background-position: 40px center;
 }
 
 footer #copy {
 	margin: 20px 0 10px 300px;
-	width:600px;	
-	float:left;	
+	width: 600px;
+	float: left;
 }
 
-#main_img{
+#main_img {
 	text-align: center;
-} 
-#main_img img{
-    margin:9px 0 0 0; 
 }
 
-div#front{
-    margin:5px 0 5px 20px;
+#main_img img {
+	margin: 9px 0 0 0;
+}
+
+div#front {
+	margin: 5px 0 5px 20px;
 }
 
 #sub_img {
@@ -213,8 +218,10 @@ div#front{
 
 #sub_menu a {
 	text-decoration: none;
-	color: white; font-family: Arial, Helvetica, sans-serif;
-	font-weight:bold; font-size:16px;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
 	display: block;
 	height: 15px;
 	width: 160px;
@@ -227,9 +234,11 @@ div#front{
 
 #sub_menu a:hover {
 	background-image: url(../images/bullet_orange.gif);
-	background-repeat: no-repeat; 
+	background-repeat: no-repeat;
 	background-position: right center;
-	color: #F90;font-weight:bold; font-size:16px;
+	color: #F90;
+	font-weight: bold;
+	font-size: 16px;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -239,7 +248,7 @@ article {
 	padding-right: 10px;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 1em;
-	line-height: 1.5em; 
+	line-height: 1.5em;
 }
 
 article p {
@@ -255,9 +264,9 @@ article table#notice {
 article table#notice th {
 	height: 20px;
 	width: 70px;
-	font-size: 14px; 
+	font-size: 14px;
 	font-weight: bold;
-	padding: 5px; 
+	padding: 5px;
 	color: #FFF;
 	border-bottom: 1px dotted #999;
 }
@@ -327,7 +336,7 @@ form #buttons {
 	margin: 20px 0 0 0;
 }
 
-form  .submit,form  .cancel {
+form  .submit, form  .cancel {
 	height: 30px; /* 버튼의 세로 크기를 정의합니다. */
 	width: 150px; /* 버튼의 가로 크기를 정의합니다. */
 	border: 1px solid #666; /* 버튼의 테두리를 정의합니다. */
@@ -345,5 +354,5 @@ form  .submit {
 }
 
 form  .cancel {
-	background-image: url(../images/cancel_back.jpg);	
+	background-image: url(../images/cancel_back.jpg);
 }
