@@ -30,7 +30,13 @@ function idcheck(){
 		return;
 	}
 	var url = "GetReadyServlet?command=id_check_form&id" + document.formm.id.value;
-	window.open(url,"_blank_1","toolbar=no, menubar=no, scrollbars=yes, resizable=no, width=550, height=300, top=300, left=300")
+	window.open(url,"_blank_1","toolbar=no, menubar=no, scrollbars=yes, resizable=no, width=550, height=300, top=300, left=300");
+}
+
+function postal_code(){
+	var url="GetReadyServlet?command=find_postal_code";
+	window.open(url,"_blank_1","toolbar=no, menubar=no, scrollbars=yes, resizable=no, width=550, height=300, top=300, left=300");
+	
 }
 
 function go_next(){
