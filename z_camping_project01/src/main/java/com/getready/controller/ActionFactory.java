@@ -39,6 +39,30 @@ public class ActionFactory {
 			action = new LoginAction();
 		} else if (command.equals("logout")) {
 			action = new LogoutAction();
+		} else if(command.equals("cart_insert")) {
+			action = new CartInsertAction();
+		} else if(command.equals("cart_list")) {
+			action = new CartListAction();
+		} else if(command.equals("cart_delete")) {
+			action = new CartDeleteAction();
+		} else if(command.equals("order_insert")) {
+			action = new OrderInsertAction();
+		} else if(command.equals("order_list")) {
+			action = new OrderListAction();
+		} else if(command.equals("mypage")) {
+			action = new MyPageAction();
+		} else if(command.equals("order_detail")) {
+			action = new OrderDetailAction();
+		} else if(command.equals("order_all")) {
+			action = new OrderAllAction();
+		} else if(command.equals("qna_list")) {
+			action = new QnaListAction();
+		} else if(command.equals("qna_write_form")) {
+			action = new QnaWriteFormAction();
+		} else if(command.equals("qna_write")) {
+			action = new QnaWriteAction();
+		} else if(command.equals("qna_view")) {
+			action = new QnaViewAction();
 		}
 		return action;
 	}
