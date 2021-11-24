@@ -23,7 +23,7 @@ public class QnaListAction implements Action {
 		MemberVO loginUser = (MemberVO) session.getAttribute("loginUser");
 		
 		if(loginUser == null) {
-			url = "NonageServlet?command=login_form";
+			url = "GetReadyServlet?command=login_form";
 		}else {
 			QnaDAO qnaDAO = QnaDAO.getInstance();
 			ArrayList<QnaVO> qnaList = qnaDAO.listQna(loginUser.getId());

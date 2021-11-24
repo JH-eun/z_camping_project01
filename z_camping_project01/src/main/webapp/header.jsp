@@ -27,7 +27,10 @@
 			<ul>
 				<c:choose>
 				<c:when test="${empty sessionScope.loginUser }">
-				<li><a href="GetReadyServlet?command=login_form">LOGIN</a></li>
+				<li>
+				<a href="GetReadyServlet?command=login_form" style="width:110px;">LOGIN(CUSTOMER</a>
+				<a href="GetReadyServlet?command=admin_login_form" style="width:100px;">|  ADMIN)</a>
+				</li>
 				<li></li>
 				<li><a href="GetReadyServlet?command=contract">JOIN</a></li>
 				</c:when>

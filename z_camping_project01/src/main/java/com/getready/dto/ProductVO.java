@@ -12,12 +12,6 @@ public class ProductVO {
 	private int price3;
 	private String content;
 	private String image;
-	public String getImage() {
-		return image;
-	}
-	public void setImage(String image) {
-		this.image = image;
-	}
 	private String puseyn;
 	private String bestyn;
 	private Timestamp indate;
@@ -63,6 +57,12 @@ public class ProductVO {
 	}
 	public void setContent(String content) {
 		this.content = content;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
 	}
 	public String getPuseyn() {
 		return puseyn;
