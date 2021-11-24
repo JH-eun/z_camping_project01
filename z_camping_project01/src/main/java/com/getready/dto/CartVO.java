@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 
 public class CartVO {
 	
-	private int 	cnum;
+	private int cnum;
 	private String id;
 	private int pnum;
 	

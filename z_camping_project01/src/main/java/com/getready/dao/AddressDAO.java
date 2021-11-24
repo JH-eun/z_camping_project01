@@ -22,7 +22,7 @@ public class AddressDAO {
 	public ArrayList<AddressVO> selectAddressByGil(String gil){
 		ArrayList<AddressVO> list = new ArrayList<AddressVO>();
 		
-		String sql = "select * from address where gil like '%'||?||'%";
+		String sql = "select * from camp_address where gil like '%'||?||'%";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;

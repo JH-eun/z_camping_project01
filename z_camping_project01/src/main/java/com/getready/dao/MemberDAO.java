@@ -22,7 +22,7 @@ public class MemberDAO {
 	
 	public int confirmID(String userid) {
 		int result = -1;
-		String sql = "select * from member where id=?";
+		String sql = "select * from camp_member where id=?";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -48,7 +48,7 @@ public class MemberDAO {
 	
 	public MemberVO getMember(String id) {
 		MemberVO memberVO = null;
-		String sql = "select * from member where id=?";
+		String sql = "select * from camp_member where id=?";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -81,7 +81,7 @@ public class MemberDAO {
 	
 	public int inserMember(MemberVO memberVO) {
 		int result = 0;
-		String sql = "insert into member(id, pwd, name, postal_code,";
+		String sql = "insert into camp_member(id, pwd, name, postal_code,";
 		sql += " address, phone) values(?,?,?,?,?,?)";
 		
 		Connection conn = null;
@@ -111,7 +111,7 @@ public class MemberDAO {
 	
 	public ArrayList<MemberVO> listMember(String member_name){
 		ArrayList<MemberVO> memberList = new ArrayList<MemberVO>();
-		String sql = "select * from member where name like '%'||?||'%'" +
+		String sql = "select * from camp_member where name like '%'||?||'%'" +
 				" order by indate desc";
 		
 		Connection conn = null;

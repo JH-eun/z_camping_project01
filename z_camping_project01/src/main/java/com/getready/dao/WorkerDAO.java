@@ -18,7 +18,7 @@ public class WorkerDAO {
 	}
 	
 	public int workerCheck(String userid, String userpw) {
-		String sql = "select pwd prom worker where id=?";
+		String sql = "select pwd from camp_worker where id=?";
 		int result = -1;
 		
 		Connection conn = null;

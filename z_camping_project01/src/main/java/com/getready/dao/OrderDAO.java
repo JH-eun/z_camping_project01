@@ -32,7 +32,7 @@ public class OrderDAO {
 		try {
 
 			conn = DBManager.getConnection();
-			String selectMaxOnum = "select max(onum) from orders";
+			String selectMaxOnum = "select max(onum) from camp_orders";
 			pstmt = conn.prepareStatement(selectMaxOnum);
 			rs = pstmt.executeQuery();
 
@@ -41,7 +41,7 @@ public class OrderDAO {
 			}
 			pstmt.close();
 
-			String insertOrder = "insert into orders(onum, id) values(" + "orders_seq.nextval, ?)";
+			String insertOrder = "insert into camp_orders(onum, id) values(" + "orders_seq.nextval, ?)";
 			pstmt = conn.prepareStatement(insertOrder);
 			pstmt.setString(1, id);
 			pstmt.executeUpdate();
@@ -65,7 +65,7 @@ public class OrderDAO {
 		try {
 			conn = DBManager.getConnection();
 
-			String insertOrderDetail = "insert into order_detail(odnu, onum, "
+			String insertOrderDetail = "insert into camp_order_detail(odnu, onum, "
 					+ "pnum, quantity) values(order_detail_seq.nextval, ?,?,?)";
 
 			pstmt = conn.prepareStatement(insertOrderDetail);
@@ -75,7 +75,7 @@ public class OrderDAO {
 			pstmt.executeUpdate();
 			pstmt.close();
 
-			String updateCartResult = "update cart set rewult=2 where cnum=?";
+			String updateCartResult = "update camp_cart set result=2 where cnum=?";
 			pstmt = conn.prepareStatement(updateCartResult);
 			pstmt.setInt(1, cartVO.getCnum());
 			pstmt.executeUpdate();
@@ -198,7 +198,7 @@ public class OrderDAO {
 	}
 
 	public void updateOrderResult(String onum) {
-		String sql = "update order_detail set result='2' where odnum=?";
+		String sql = "update camp_order_detail set result='2' where odnum=?";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;

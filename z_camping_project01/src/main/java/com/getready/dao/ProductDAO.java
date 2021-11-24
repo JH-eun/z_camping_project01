@@ -87,7 +87,7 @@ public class ProductDAO {
 	// search result by item number
 	public ProductVO getProduct(String pnum) {
 		ProductVO product = null;
-		String sql = "select * from product where pnum=?";
+		String sql = "select * from camp_product where pnum=?";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -125,7 +125,7 @@ public class ProductDAO {
 
 	public ArrayList<ProductVO> listKindProduct(String kind) {
 		ArrayList<ProductVO> productList = new ArrayList<ProductVO>();
-		String sql = "select * from product where kind=?";
+		String sql = "select * from camp_product where kind=?";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -159,7 +159,7 @@ public class ProductDAO {
 	 */
 	public int totalRecord(String product_name) {
 		int total_pages = 0;
-		String sql = "select count(*) from product where name like '%||?||'%'";
+		String sql = "select count(*) from camp_product where name like '%||?||'%'";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -240,7 +240,7 @@ public class ProductDAO {
 		ArrayList<ProductVO> productList = new ArrayList<ProductVO>();
 		
 		String str = "select pnum, indate, pname, price1, price2, puseyn, bestyn " +
-				" from product where name like '%'||?||'%' order by pnum desc";
+				" from camp_product where name like '%'||?||'%' order by pnum desc";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -292,7 +292,7 @@ public class ProductDAO {
 	public int insertProduct(ProductVO product) {
 		int result = 0;
 		
-		String sql = "insert into product (" + 
+		String sql = "insert into camp_product (" + 
 				"pnum, kind, pname, price1, price2, price3, cotent, image) " +
 				"values(productseq.nextval, ?, ?, ?, ?, ?, ?, ?)";
 		
@@ -321,7 +321,7 @@ public class ProductDAO {
 	
 	public int updateProduct(ProductVO product) {
 		int result = -1;
-		String sql = "update product set kind=?, useyn=?, pname=?" + 
+		String sql = "update camp_product set kind=?, useyn=?, pname=?" + 
 				", price1=?, price2=?, price3=?, content=?, image?, bestyn=? " +
 				"where pnum=?";
 		

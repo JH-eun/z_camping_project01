@@ -22,7 +22,7 @@ public class QnaDAO {
 	
 	public ArrayList<QnaVO> listQna(String id){
 		ArrayList<QnaVO> qnaList = new ArrayList<QnaVO>();
-		String sql = "select * from qna where id=? order by qnanum desc";
+		String sql = "select * from camp_qna where id=? order by qnanum desc";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;

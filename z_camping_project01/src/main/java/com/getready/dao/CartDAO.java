@@ -22,7 +22,7 @@ public class CartDAO {
 	}
 	
 	public void insertCart(CartVO cartVO) {
-		String sql = "insert into cart(cnum,id,pnum,quantity)" + "values(cart_seq.nextval,?,?,?)";
+		String sql = "insert into camp_cart(cnum,id,pnum,quantity)" + "values(cart_seq.nextval,?,?,?)";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -79,7 +79,7 @@ public class CartDAO {
 	}
 	
 	public void deleteCart(int cnum) {
-		String sql = "delete cart where cnum=?";
+		String sql = "delete camp_cart where cnum=?";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
