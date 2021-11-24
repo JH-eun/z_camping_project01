@@ -28,7 +28,7 @@ function worker_check()
 		<header>
 			<div id="logo">
 				<a href="admin/main.jsp">
-				<img src="admin/images/bar_01.gif" sytle="float:left">
+				<img src="admin/images/bar_01.gif" style="float:left">
 				<img src="admin/images/text.gif">
 				</a>
 			</div>
