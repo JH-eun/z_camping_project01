@@ -27,7 +27,7 @@
 				<th>이메일</th><th>우편번호</th>
 				<th>주소</th><th> 전화</th><th>가입일</th>
 			</tr>
-			<c:forEach items=${memberList }" var="memberVO">
+			<c:forEach items="${memberList }" var="memberVO">
 			<tr>
 				<td>${memberVO.id }
 				<c:choose>
