@@ -25,11 +25,11 @@ function go_save(){
 
 function idcheck(){
 	if(document.formm.id.value == ""){
-		alert("아이디를 입력하여 주세요.");
+		alert("아이디를 입력해 주세요.");
 		document.formm.id.focus();
 		return;
 	}
-	var url = "GetReadyServlet?command=id_check_form&id" + document.formm.id.value;
+	var url = "GetReadyServlet?command=id_check_form&id=" + document.formm.id.value;
 	window.open(url,"_blank_1","toolbar=no, menubar=no, scrollbars=yes, resizable=no, width=550, height=300, top=300, left=300");
 }
 

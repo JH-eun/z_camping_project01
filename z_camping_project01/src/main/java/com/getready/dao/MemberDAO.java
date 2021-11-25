@@ -20,9 +20,9 @@ public class MemberDAO {
 		return instance;
 	}
 	
-	public int confirmID(String userid) {
+	public int confirmID(String id) {
 		int result = -1;
-		String sql = "select * from camp_member where id=?";
+		String sql = "select id from camp_member where id=?";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -31,7 +31,7 @@ public class MemberDAO {
 		try {
 			conn = DBManager.getConnection();
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, userid);
+			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				result = 1;
