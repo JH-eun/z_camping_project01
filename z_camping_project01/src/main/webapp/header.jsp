@@ -18,7 +18,7 @@
 	<header>
 		<!-- logo -->
 		<div id="logo">
-			<a href="GetReadyServler?command=index">
+			<a href="GetReadyServlet?command=index">
 				<img src="images/logo.gif" width="180" height="100" alt="getready">
 			</a>
 		</div>
@@ -28,8 +28,8 @@
 				<c:choose>
 				<c:when test="${empty sessionScope.loginUser }">
 				<li>
-				<a href="GetReadyServlet?command=login_form" style="width:110px;">LOGIN(CUSTOMER</a>
-				<a href="GetReadyServlet?command=admin_login_form" style="width:100px;">|  ADMIN)</a>
+				<a href="GetReadyServlet?command=login_form" style="width:110px;">LOGIN</a>
+				<a href="GetReadyServlet?command=admin_login_form" style="width:100px;">ADMIN</a>
 				</li>
 				<li></li>
 				<li><a href="GetReadyServlet?command=contract">JOIN</a></li>

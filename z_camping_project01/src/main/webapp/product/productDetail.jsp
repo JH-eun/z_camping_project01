@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
-<%@ include file="sub_img.html" %>
-<%@ include file="sub_menu.html" %>
+<%-- <%@ include file="sub_img.html" %>
+<%@ include file="sub_menu.html" %> --%>
 <article>
 	<h1> Item</h1>
 	<div id="itemdetail">
@@ -13,7 +13,7 @@
 					<span style="float: left;">
 						<img src="product_images/${productVO.image }"/>
 					</span>
-					<h2>${productVO.name }</h2>
+					<h2>${productVO.pname }</h2>
 				</a>
 				<label> 가  격 : </label>
 				<p> ${productVO.price2 } 원</p>

@@ -90,7 +90,7 @@ public class QnaDAO {
 	}
 	
 	public void insertqna(QnaVO qnaVO, String session_id) {
-		String sql = "insert into qna(qnanum, subject, content, id) values(qna_seq.nextval,?,?,?)";
+		String sql = "insert into camp_qna(qnanum, subject, content, id) values(camp_qna_seq.nextval,?,?,?)";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;

@@ -11,7 +11,7 @@
 
 <div class="clear"></div>
 
-<div id="front">
+<%-- <div id="front">
 	<h2>New Item</h2>
 	<div id="bestProduct">
 		<c:forEach items="${newProductList }" var="productVO">
@@ -39,6 +39,6 @@
 		</c:forEach>
 	</div>
 	<div class="clear"></div>
-</div>
+</div> --%>
 <!-- footer -->
 <%@ include file="../footer.jsp"%>
