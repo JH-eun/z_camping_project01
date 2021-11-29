@@ -19,7 +19,7 @@
 		<!-- logo -->
 		<div id="logo">
 			<a href="GetReadyServlet?command=index">
-				<img src="images/logo.gif" width="180" height="100" alt="getready">
+				<img src="images/img_logo.jpeg" width="180" height="100" alt="getready">
 			</a>
 		</div>
 		<!-- logo end -->
@@ -28,14 +28,14 @@
 				<c:choose>
 				<c:when test="${empty sessionScope.loginUser }">
 				<li>
-				<a href="GetReadyServlet?command=login_form" style="width:110px;">LOGIN</a>
-				<a href="GetReadyServlet?command=admin_login_form" style="width:100px;">ADMIN</a>
+				<a href="GetReadyServlet?command=login_form">LOGIN</a>
+				<a href="GetReadyServlet?command=admin_login_form">ADMIN</a>
 				</li>
 				<li></li>
 				<li><a href="GetReadyServlet?command=contract">JOIN</a></li>
 				</c:when>
 				<c:otherwise>
-				<li style="color:orange">${sessionScope.loginUser.name }($sessionScope.loginUser.id})</li>
+				<li style="color:orange">${sessionScope.loginUser.name }({$sessionScope.loginUser.id})</li>
 				<li><a href="GetReadyServlet?command=logout">LOGOUT</a></li>
 				</c:otherwise>
 				</c:choose>
