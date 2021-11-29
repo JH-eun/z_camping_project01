@@ -44,7 +44,7 @@ public class CartDAO {
 
 	public ArrayList<CartVO> listCart(String userId){
 		ArrayList<CartVO> cartList = new ArrayList<CartVO>();
-		String sql = "select * from cart_view id=? order by cnum desc";
+		String sql = "select * from cart_view where id=? order by cnum desc";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;

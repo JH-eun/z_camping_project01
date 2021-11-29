@@ -213,7 +213,7 @@ div#front{
 
 #sub_menu a {
 	text-decoration: none;
-	color: white; font-family: Arial, Helvetica, sans-serif;
+	color: black; font-family: Arial, Helvetica, sans-serif;
 	font-weight:bold; font-size:16px;
 	display: block;
 	height: 15px;
@@ -316,7 +316,7 @@ form input.dup {
 	border: none; /* 배경 이미지가 어둡기 때문에 여기서 border는 없애버리겠습니다. */
 	margin: 0 0 0 5px; /* 마진을 왼쪽만 줘서 input과의 간격을 벌립니다. */
 	font-weight: bold; /* 글꼴 두께를 두껍게 */
-	color: #FFF; /* 글꼴의 색상은 흰색으로 */
+	color: black; /* 글꼴의 색상은 흰색으로 */
 	background-image: url(../images/dup.jpg);
 	/* 백그라운드 이미지를 사용합니다. */
 	background-repeat: repeat-x; /* 백그라운드 이미지를 x축으로 반복 */
@@ -331,12 +331,11 @@ form  .submit,form  .cancel {
 	height: 30px; /* 버튼의 세로 크기를 정의합니다. */
 	width: 150px; /* 버튼의 가로 크기를 정의합니다. */
 	border: 1px solid #666; /* 버튼의 테두리를 정의합니다. */
-	border-radius: 10px; /* border-radius를 통해 버튼을 둥그렇게 만듭니다. */
-	box-shadow: 3px 3px 2px #ccc; /* box-shadow를 이용해서 그림자를 만듭니다. */
+	border-radius: 5px; /* border-radius를 통해 버튼을 둥그렇게 만듭니다. */
 	font-size: 14px; /* 글꼴 사이즈를 조절합니다. */
 	background-repeat: repeat-x;
 	background-position: center center;
-	color: #fff;
+	color:  black;
 	margin: 0 0 0 20px;
 }
 
