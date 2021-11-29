@@ -32,10 +32,10 @@
 	<c:otherwise>
 	<c:forEach items="${productList}" var="productVO">
     <tr>
-      <td height="23" align="center" >${productVO.pseq}</td>
+      <td height="23" align="center" >${productVO.pnum}</td>
       <td style="text-align: left; padding-left: 50px; padding-right: 0px;">   
-        <a href="#" onClick="go_detail('${tpage}', '${productVO.pseq}')">
-    	 ${productVO.name}     
+        <a href="#" onClick="go_detail('${tpage}', '${productVO.pnum}')">
+    	 ${productVO.pname}     
    		</a>
    	  </td>
       <td><fmt:formatNumber value="${productVO.price1}"/></td>
@@ -43,7 +43,7 @@
       <td><fmt:formatDate value="${productVO.indate}"/></td>
       <td>
       	<c:choose>
-   	 		<c:when test='${productVO.useyn=="1"}'>미사용</c:when>
+   	 		<c:when test='${productVO.puseyn=="1"}'>미사용</c:when>
    	 		<c:otherwise>사용</c:otherwise>   	 		
    	 	</c:choose>	 
    	  </td> 

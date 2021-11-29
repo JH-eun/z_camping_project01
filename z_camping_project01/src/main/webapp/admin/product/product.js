@@ -84,12 +84,12 @@ function go_total() {
 	theForm.submit();
 }
 
-function go_detail(tpage, pseq) {
+function go_detail(tpage, pnum) {
 	var theForm = document.frm;
 	// 상품 상세 보기 페이지에서 다시 상품 리스트로 돌아왔을 경우 현재 페이지로
 	// 돌아올 수 있도록 하기 위해서 현재 페이지 번호를 쿼리 스트링으로 넘겨준다.
 	theForm.action =  "GetReadyServlet?command=admin_product_detail&tpage=" +
-	                  tpage+"&pseq="+pseq;
+	                  tpage+"&pnum="+pnum;
 	
 	theForm.submit();
 }
@@ -107,15 +107,15 @@ function go_list(tpage) {
 	theForm.submit();
 }
 // **************** productDetail.jsp
-function go_mod(tpage, pseq) {
+function go_mod(tpage, pnum) {
 	var theForm = document.frm;
 	//현재 페이지를 쿼리 스트링으로 넘긴다.
 	theForm.action = "GetReadyServlet?command=admin_product_update_form&tpage=" + 
-		              tpage+"&pseq="+pseq;
+		              tpage+"&pnum="+pnum;
 	theForm.submit();
 }
 
-function go_mod_save(tpage, pseq) {
+function go_mod_save(tpage, pnum) {
 	var theForm = document.frm;
 
 	if (theForm.kind.value == '') {
@@ -135,10 +135,10 @@ function go_mod_save(tpage, pseq) {
 		theForm.content.focus();
 	} else {
 		if (confirm('수정하시겠습니까?')) {
-			// [1] 상품을 삭제하지 않는 대신 사용하지 않음을 products 테이블의 useyn 컬럼에 1을 채워 넣기 위해서
-			// useyns hidden 태그에 1을 지정한다.
-			if (theForm.useyn.checked == true) {
-				theForm.useyn.value = "y";
+			// [1] 상품을 삭제하지 않는 대신 사용하지 않음을 products 테이블의 puseyn 컬럼에 1을 채워 넣기 위해서
+			// puseyns hidden 태그에 1을 지정한다.
+			if (theForm.puseyn.checked == true) {
+				theForm.puseyn.value = "y";
 			}
 			if(theForm.bestyn.checked == true) {
 				theForm.bestyn.value = "y";
@@ -156,8 +156,8 @@ function go_mod_save(tpage, pseq) {
 	}
 }
 
-function go_mod_mov(tpage, pseq) {
+function go_mod_mov(tpage, pnum) {
 	var theForm = document.frm;
-	theForm.action = 'GetReadyServlet?command=admin_product_detail&tpage=' + tpage + "&pseq=" + pseq;
+	theForm.action = 'GetReadyServlet?command=admin_product_detail&tpage=' + tpage + "&pnum=" + pnum;
 	theForm.submit();
 }

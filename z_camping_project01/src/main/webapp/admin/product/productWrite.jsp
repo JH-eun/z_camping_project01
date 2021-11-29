@@ -20,7 +20,7 @@
 		<tr>
 			<th>상품명</th>
 			<td width="343" colspan="5">
-				<input type="text" name="name" size="47" maxlength="100">
+				<input type="text" name="pname" size="47" maxlength="100">
 			</td>
 		</tr>
 		<tr>

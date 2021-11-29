@@ -158,7 +158,7 @@ public class ProductDAO {
 	 */
 	public int totalRecord(String product_name) {
 		int total_pages = 0;
-		String sql = "select count(*) from camp_product where pname like '%||?||'%'";
+		String sql = "select count(*) from camp_product where pname like '%'||?||'%'";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
