@@ -7,9 +7,9 @@ public class ProductVO {
 	private int pnum;
 	private String pname;
 	private String kind;
-	private int price1;
-	private int price2;
-	private int price3;
+	private int price1; //원가
+	private int price2; //판매가 
+	private int price3;//순익 
 	private String content;
 	private String image;
 	private String puseyn;

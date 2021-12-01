@@ -105,8 +105,8 @@ public class ProductDAO {
 				product.setPname(rs.getString("pname"));
 				product.setKind(rs.getString("kind"));
 				product.setPrice1(rs.getInt("price1"));
-				product.setPrice1(rs.getInt("price2"));
-				product.setPrice1(rs.getInt("price3"));
+				product.setPrice2(rs.getInt("price2"));
+				product.setPrice3(rs.getInt("price3"));
 				product.setContent(rs.getString("content"));
 				product.setImage(rs.getString("image"));
 				product.setPuseyn(rs.getString("puseyn"));

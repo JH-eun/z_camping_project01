@@ -22,10 +22,10 @@ public class ProductDetailAction implements Action{
 		ProductVO productVO = productDAO.getProduct(pnum);
 		
 		request.setAttribute("productVO", productVO);
-		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 		
+		System.out.println(productVO.getPrice2());
 	}
 	
 }
