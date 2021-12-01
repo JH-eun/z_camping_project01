@@ -6,7 +6,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GetReady Admin</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="admin/css/admin.css">
 <script type="text/javascript" src="admin/product/product.js"></script>
 <c:choose>
@@ -23,9 +26,10 @@
 			<div id="logo">
 				<img src="admin/images/img_logo6.jpeg">
 			</div>
-			<input class="btn" type="button" value="logout" style="float: right;"
+			<input class="btn btn-outline-success" type="button" value="logout" style="float: right;  margin-right:40px;"
 				onclick="location.href='GetReadyServlet?command=admin_logout'">
-			<input class="btn" type="button" value="home" style="float: right;"
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input class="btn btn-outline-success" type="button" value="home" style="float: right;  margin-right:10px;"
 				onclick="location.href='GetReadyServlet?command=index'">
 		</header>
 		<div class="clear"></div>

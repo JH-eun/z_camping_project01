@@ -146,7 +146,7 @@ public class QnaDAO {
 	}
 	
 	public void updateQna(QnaVO qnaVO) {
-		String sql = "update qna set reply=?, rep='2' where qnanum=?";
+		String sql = "update camp_qna set reply=?, rep='2' where qnanum=?";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;

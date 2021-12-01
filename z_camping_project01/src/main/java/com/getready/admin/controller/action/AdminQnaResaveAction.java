@@ -15,7 +15,7 @@ public class AdminQnaResaveAction implements Action{
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String url = "GetReadyServlet?command=admin_product_list";
+		String url = "GetReadyServlet?command=admin_qna_list";
 		
 		String qnanum = request.getParameter("qnanum").trim();
 		String reply = request.getParameter("reply").trim();

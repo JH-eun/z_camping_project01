@@ -16,7 +16,7 @@
 			<tr>
 				<td>회원이름
 				<input type="text" name="key">
-				<input class="btn" type="button" value="검색" onClick="go_search()">
+				<input class="btn btn-outline-dark btn-sm" type="button" value="검색" onClick="go_search()">
 				</td>
 			</tr>
 		</table>

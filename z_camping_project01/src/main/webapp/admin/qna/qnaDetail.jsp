@@ -12,8 +12,8 @@
 	function go_rep(qnanum){
 		var theForm = document.frm;
 		theForm.qnanum.value = qnanum;
-		thrForm.action = "GetReadyServlet?command=admin_qna_repsave";
-		thrForm.submit();
+		theForm.action = "GetReadyServlet?command=admin_qna_repsave";
+		theForm.submit();
 	}
 </script>
 <article>
@@ -45,7 +45,7 @@
 			<tr>
 				<td colspan="2">
 					<textarea name="reply" rows="3" cols="50"></textarea>
-					<input type="button" class="btn" value="저장" onClick="go_rep('${qnaVO.qnanum}')">
+					<input type="button" class="btn btn-outline-dark btn-sm" value="저장" onClick="go_rep('${qnaVO.qnanum}')">
 				</td>
 			</tr>
 		</table>
@@ -60,7 +60,7 @@
 			</table>
 		</c:otherwise>
 	</c:choose>
-	<input type="button" class="btn" value="목록" onClick="go_list()">
+	<input type="button" class="btn btn-outline-dark btn-sm" value="목록" onClick="go_list()">
 </form>
 </article>
 <%@ include file="/admin/footer.jsp" %>

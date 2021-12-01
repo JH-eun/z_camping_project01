@@ -5,14 +5,14 @@
 <script type="text/javascript">
 	function go_view(qnanum){
 		var theForm = document.frm;
-		thrForm.qnanum.value = qnanum;
-		thrForm.action = "GetReadyServlet?command=admin_qna_detail";
-		thrForm.submit();
+		theForm.qnanum.value = qnanum;
+		theForm.action = "GetReadyServlet?command=admin_qna_detail";
+		theForm.submit();
 	}
 </script>
 
 <article>
-<h1>qna 리스트</h1>
+<h1>Q&amp;A 리스트</h1>
 <form name="frm" method="post">
 	<input type="hidden" name="qnanum">
 	<table id="orderList">

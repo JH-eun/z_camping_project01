@@ -30,7 +30,7 @@
 		<table style="float:right;">
 			<tr>
 				<td>주문자 이름<input type="text" name="key">
-				<input class="btn" type="button" value="검색" onClick="go_search()">
+				<input class="btn btn-outline-dark btn-sm" type="button" value="검색" onClick="go_search()">
 				</td>
 			</tr>
 		</table>
@@ -61,7 +61,7 @@
 			</tr>
 			</c:forEach>
 		</table>
-		<input type="button" class="btn" style="width: 200px"
+		<input type="button" class="btn btn-outline-dark btn-sm" style="width: 200px"
 			value="주문처리(입금확인)" onClick="go_order_save()">
 	</form>
 </article>

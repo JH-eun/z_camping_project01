@@ -50,8 +50,8 @@
 			</td>
 		</tr>
 	</table>
-	<input class="btn" type="button" value="등록" onClick="go_save()">
-	<input class="btn" type="button" value="취소" onClick="go_mov()">
+	<input class="btn btn-outline-dark btn-sm" type="button" value="등록" onClick="go_save()">
+	<input class="btn btn-outline-dark btn-sm" type="button" value="취소" onClick="go_mov()">
 </form>
 </article>
 <%@ include file="/admin/footer.jsp" %>

@@ -33,8 +33,8 @@
 		</td>
 	</tr>
 </table>
-<input class="btn" type="button" value="수정" onClick="go_mod('${tpage}','${productVO.pnum }')">
-<input class="btn" type="button" value="목록" onClick="go_list('${tpage}')">
+<input class="btn btn-outline-dark btn-sm" type="button" value="수정" onClick="go_mod('${tpage}','${productVO.pnum }')">
+<input class="btn btn-outline-dark btn-sm" type="button" value="목록" onClick="go_list('${tpage}')">
 </form>
 </article>
 <%@ include file="/admin/footer.jsp" %>

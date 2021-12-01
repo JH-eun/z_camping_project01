@@ -126,12 +126,11 @@ footer hr {
 	color: orange;
 }
 
-.btn {
+/* .btn {
 	width: 100px;
 	border-radius: 5px;
 	background-color: #FC3;
 	color: #333;
-	box-shadow: 3px 3px 3px #999999;
 	text-decoration: none;
 	text-align: center;
 	padding: 5px;
@@ -144,7 +143,7 @@ footer hr {
 
 .btn:ACTIVE {
 	box-shadow: none;
-}
+} */
 
 article {
 	min-height: 600px;
@@ -356,6 +355,7 @@ table#orderList {
 nav#sub_menu {
 	float: left;
 	margin-right: 10px;
+	margin-left: 40px;
 }
 
 nav#sub_menu ul li {
