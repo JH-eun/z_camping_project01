@@ -23,7 +23,7 @@ a:hover {
 }
 
 #wrap {
-	width: 971px;
+	width: auto;
 	text-align: center;
 	margin: 0px;
 	margin-right: auto;
@@ -39,7 +39,12 @@ nav#top_menu {
 
 #logo {
 	width: 971px;
-	margin: 60px 0 40px 0;
+	margin: 40px 40px 40px 40px;
+}
+
+#lologo {
+	width: 971px;
+	margin: 100px 40px 40px 40px;
 }
 
 nav#top_menu ul {
@@ -170,7 +175,7 @@ th {
 }
 
 #loginform {
-	margin-left: 400px;
+	margin-left: 500px;
 }
 
 table#productList {

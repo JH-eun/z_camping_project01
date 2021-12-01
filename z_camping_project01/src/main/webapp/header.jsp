@@ -29,7 +29,6 @@
 				<c:when test="${empty sessionScope.loginUser }">
 				<li>
 				<a href="GetReadyServlet?command=login_form">LOGIN</a>
-				<a href="GetReadyServlet?command=admin_login_form">ADMIN</a>
 				</li>
 				<li></li>
 				<li><a href="GetReadyServlet?command=contract">JOIN</a></li>

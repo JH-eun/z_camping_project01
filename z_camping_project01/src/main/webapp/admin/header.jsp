@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,12 +21,11 @@
 	<div id="wrap">
 		<header>
 			<div id="logo">
-				<a href="GetReadyServlet?command=admin_login_form">
-					<img style="width:800px" src="admin/images/bar_01.gif">
-					<img src="admin/images/text.gif">
-				</a>
+				<img src="admin/images/img_logo6.jpeg">
 			</div>
-			<input class="btn" type="button" value="logout" style="float:right;"
+			<input class="btn" type="button" value="logout" style="float: right;"
 				onclick="location.href='GetReadyServlet?command=admin_logout'">
+			<input class="btn" type="button" value="home" style="float: right;"
+				onclick="location.href='GetReadyServlet?command=index'">
 		</header>
 		<div class="clear"></div>

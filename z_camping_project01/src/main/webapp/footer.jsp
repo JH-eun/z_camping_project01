@@ -11,6 +11,7 @@
 		Copyright 2021 ©  GetReady Inc. All rights reserved.
 	</div>
 </footer>
+<a style="color: black;" href="GetReadyServlet?command=admin_login_form">ADMIN</a>
 <!-- footer end -->
 </div>
 </body>

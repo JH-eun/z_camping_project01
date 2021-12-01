@@ -27,20 +27,19 @@ function worker_check()
 	<div id="wrap">
 		<header>
 			<div id="logo">
-				<a href="admin/main.jsp">
-				<img src="admin/images/bar_01.gif" style="float:left">
-				<img src="admin/images/text.gif">
+				<a href="index.jsp">
+				<img src="admin/images/img_logo8.jpeg">
 				</a>
 			</div>
 		</header>
 		<div class="clear"></div>
-		<article>
+		 <br><br><br><br><br><br>
 			<div id="loginform">
 				<form name="frm" method="post" action="GetReadyServlet?command=admin_login">
-					<table>
+					<table style="margin-left:120px;">
 						<tr>
 							<td> 아 이 디 </td>
-							<td><input type="text" name="workerId" size="10" value="admin"></td>
+							<td><input type="text" name="workerId" size="10"></td>
 						</tr>
 						<tr>
 							<td> 비밀번호 </td>
@@ -56,7 +55,7 @@ function worker_check()
 					</table>
 				</form>
 			</div>
-		</article>
+		 
 	</div>
 </body>
 </html>
