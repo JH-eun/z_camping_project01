@@ -122,7 +122,7 @@ public class MemberDAO {
 			conn = DBManager.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			if(member_name == "") {
-				pstmt.setString(0, "%");
+				pstmt.setString(1, "%");
 			}else {
 				pstmt.setString(1, member_name);
 			}

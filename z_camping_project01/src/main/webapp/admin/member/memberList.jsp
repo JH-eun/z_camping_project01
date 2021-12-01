@@ -44,7 +44,7 @@
 				<td>${memberVO.postal_code }</td>
 				<td>${memberVO.address }</td>
 				<td>${memberVO.phone }</td>
-				<td>{fmt:formatDate value="${memberVO.indate }"/></td>
+				<td><fmt:formatDate value="${memberVO.indate }"/></td>
 			</tr>
 			</c:forEach>
 		</table>

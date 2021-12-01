@@ -268,11 +268,11 @@ article table#notice td {
 	border-bottom: 1px dotted #999;
 }
 
-article table#notice tr:hover {
+/* article table#notice tr:hover {
 	background-color: #DDF;
 	cursor: pointer;
 	color: red;
-}
+} */
 
 form {
 	margin: 10px 0 0 0;
