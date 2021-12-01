@@ -58,7 +58,7 @@ public class QnaDAO {
 	
 	public QnaVO getQna(int num) {
 		QnaVO qnaVO = null;
-		String sql = "select * from qna where qnaum=?";
+		String sql = "select * from camp_qna where qnanum=?";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -115,7 +115,9 @@ public class QnaDAO {
 	public ArrayList<QnaVO> listAllQna(){
 		ArrayList<QnaVO> qnaList = new ArrayList<QnaVO>();
 		
-		String sql = "select * from qna order by indate desc";
+		//String sql = "select * from camp_qna where id=? order by qnanum desc";
+
+		String sql = "select * from camp_qna order by indate desc";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
