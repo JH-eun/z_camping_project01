@@ -45,7 +45,7 @@
 			<th>베스트상품</th>
 			<td>
 				<c:choose>
-					<c:when test='${productVO.bestyn=="y}'>
+					<c:when test='${productVO.bestyn=="y"}'>
 						<input type="checkbox" name="bestyn" value="y" checked="checked">
 					</c:when>
 					<c:otherwise>
@@ -81,7 +81,7 @@
 			</td>
 		</tr>
 	</table>
-	<input class="btn btn-outline-dark btn-sm" type="button" value="수정" onClick="go_moc_save('${tpage}','${productVO.pnum })">
+	<input class="btn btn-outline-dark btn-sm" type="button" value="수정" onClick="go_moc_save('${tpage}','${productVO.pnum }')">
 	<input class="btn btn-outline-dark btn-sm" type="button" value="취소" onClick="go_mov()">
 </form>
 </article>
