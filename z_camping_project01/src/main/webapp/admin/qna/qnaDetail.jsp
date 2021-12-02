@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/admin/header.jsp" %>
-<%@ include file="/admin/sub_menu.jsp" %>
+<%-- <%@ include file="/admin/sub_menu.jsp" %> --%>
 <script type="text/javascript">
 	function go_list(){
 		var theForm = document.frm;
@@ -20,23 +20,25 @@
 <h1>Q&amp;A 게시판</h1>
 <form name="frm" method="post">
 	<input type="hidden" name="qnanum">
-	<table id="orderList">
+	<!-- <table id="orderList"> -->
+	<table class="table table-bordered" style="margin-left:150px; width: 80%;">
 		<tr>
-			<th width="20%">제목</th>
+			<th style="width:20%; font-size:14px;">제목</th>
 			<td>${qnaVO.subject } ${qnaVO.rep }</td>
 		</tr>
 		<tr>
-			<th>등록일</th>
+			<th style="width:20%; font-size:14px;">등록일</th>
 			<td><fmt:formatDate value="${qnaVO.indate }"/></td>
 		</tr>
 		<tr>
-			<th>내용</th>
+			<th style="width:20%; font-size:14px;">내용</th>
 			<td>${qnaVO.content }</td>
 		</tr>
 	</table>
 	<c:choose>
 		<c:when test='${qnaVO.rep=="1" }'>
-		<table id="orderList">
+		<!-- <table id="orderList"> -->
+		<table class="table table-bordered" style="margin-left:150px; width: 80%;">
 			<tr>
 				<td colspan="2">
 					<img src="admin/images/opinionimg01.gif">
@@ -52,9 +54,10 @@
 		<br>
 		</c:when>
 		<c:otherwise>
-			<table id="orderList">
+			<!-- <table id="orderList"> -->
+			<table class="table table-bordered" style="margin-left:150px; width: 80%;">
 				<tr>
-					<th>댓글</th>
+					<th style="width:20%; font-size:14px;">댓글</th>
 					<td>${qnaVO.reply }</td>
 				</tr>
 			</table>

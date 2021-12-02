@@ -31,12 +31,6 @@ a:hover {
 	min-height: 923px;
 }
 
-nav#top_menu {
-	float: right;
-	width: 600px;
-	margin: 50px 20px 0 0;
-}
-
 #logo {
 	width: 971px;
 	margin: 40px 40px 40px 40px;
@@ -46,6 +40,41 @@ nav#top_menu {
 	width: 971px;
 	margin: 100px 40px 40px 40px;
 }
+
+nav#top_menu{
+    margin: 20px 0;
+    float:left;
+}
+
+nav#top_menu ul{
+    list-style:none;
+    font-family:Verdana;
+}
+nav#top_menu ul li{
+   float:left;
+   margin:0 15px;  
+   font-size: 14pt; 
+}
+
+nav#top_menu a{
+	display:block; 
+    height:20px;
+    text-decoration:none;
+    color: black;
+    padding: 10px;
+}
+
+nav#top_menu a:hover{
+    background-image:url(../images/purple.gif);
+    background-repeat:repeat-x;
+    background-position:bottom;
+}
+
+/* nav#top_menu {
+	float: right;
+	width: 700px;
+	margin: 50px 20px 0 0;
+} 
 
 nav#top_menu ul {
 	list-style: none;
@@ -77,7 +106,7 @@ nav#top_menu ul li a.logout {
 
 nav#top_menu ul li a.logout1 {
 	margin-left: 210px;
-}
+} */
 
 .clear {
 	clear: both;
@@ -95,7 +124,7 @@ nav#top_menu ul li a.logout1 {
 	text-align: center;
 }
 
-footer {
+/* footer {
 	background-image: url("../images/under_logo.png");
 	background-repeat: no-repeat;
 	background-position: 40px center;
@@ -109,6 +138,20 @@ footer {
 footer hr {
 	width: 950px;
 	border: 1px solid;
+} */
+
+footer {
+	margin:10px 0 0 0;
+	height:50px;
+	background-image: url(../images/under_logo.gif);
+	background-repeat: no-repeat;
+	background-position: 40px center;	
+}
+
+footer #copy {
+	margin: 5px 0 10px 400px;
+	width:600px;	
+	float:left;	
 }
 
 #login {

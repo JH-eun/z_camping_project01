@@ -1,33 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/admin/header.jsp" %>
-<%@ include file="/admin/sub_menu.jsp" %>
+<%-- <%@ include file="/admin/sub_menu.jsp" %> --%>
 
 <article>
 <h1>상품 상세 보기</h1>
 <form name="frm" method="post">
-<table id="list">
+<!-- <table id="list"> -->
+<table class="table table-bordered" style="margin-left:150px; width: 80%;">
 	<tr>
-		<th>상품분류</th>
-		<td colspan="5">
+		<th width=15% style="font-size: 14px;">상품분류</th>
+		<td colspan="5" style="text-align:left;">
 			${kind }
 		</td>
 	</tr>
 	<tr>
-		<th align="center">상품명</th>
-		<td colspan="5">${productVO.pname }</td>
+		<th align="center" style="font-size: 14px;">상품명</th>
+		<td colspan="5" style="text-align:left;">${productVO.pname }</td>
 	</tr>
 	<tr>
-		<th>원가 [A]</th><td width="60">${productVO.price1 }</td>
-		<th>판매가 [B]</th><td width="60">${productVO.price2 }</td>
-		<th>[B-A]</th><td>${productVO.price3 }</td>
+		<th style="font-size: 14px; width=15%;">원가 [A]</th><td width="18%">${productVO.price1 }</td>
+		<th style="font-size: 14px; width=15%;">판매가 [B]</th><td width="18%">${productVO.price2 }</td>
+		<th style="font-size: 14px; width=15%;">[B-A]</th><td width=19%>${productVO.price3 }</td>
 	</tr>
 	
 	<tr>
-		<th>상세설명</th><td colspan="5">${productVO.content }</td>
+		<th style="font-size: 14px;">상세설명</th><td colspan="5" style="text-align:left;">${productVO.content }</td>
 	</tr>
 	<tr>
-		<th>상품이미지</th>
+		<th style="font-size: 14px;">상품이미지</th>
 		<td colspan="5" align="center">
 			<img src="product_images/${productVO.image }" width="200pt">
 		</td>

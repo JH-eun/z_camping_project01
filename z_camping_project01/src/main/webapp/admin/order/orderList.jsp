@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/admin/header.jsp" %>    
-<%@ include file="/admin/sub_menu.jsp" %>
+<%-- <%@ include file="/admin/sub_menu.jsp" %> --%>
 <script type="text/javascript">
 	function go_order_save(){
 		var count = 0;
@@ -27,7 +27,7 @@
 <article>
 	<h1>주문리스트</h1>
 	<form name="frm" method="post">
-		<table style="float:right;">
+		<table style="float:right;" >
 			<tr>
 				<td>주문자 이름<input type="text" name="key">
 				<input class="btn btn-outline-dark btn-sm" type="button" value="검색" onClick="go_search()">
@@ -35,10 +35,11 @@
 			</tr>
 		</table>
 		<br>
-		<table id="orderList">
+		<!-- <table id="orderList"> -->
+		<table class="table table-bordered">
 			<tr>
-				<th>주문처리(처리여부)</th><th>주문자</th><th>상품명</th><th>수량</th>
-				<th>우편번호</th><th>배송지</th><th>전화</th><th>주문일</th>
+				<th style="font-size: 14px;">주문처리(처리여부)</th><th style="font-size: 14px;">주문자</th><th style="font-size: 14px;">상품명</th><th>수량</th>
+				<th style="font-size: 14px;">우편번호</th><th style="font-size: 14px;">배송지</th><th style="font-size: 14px;">전화</th><th style="font-size: 14px;">주문일</th>
 			</tr>
 			<c:forEach items="${orderList }" var="orderVO">
 			<tr>

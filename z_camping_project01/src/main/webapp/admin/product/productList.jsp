@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>
 <%@ include file="/admin/header.jsp"%>
-<%@ include file="/admin/sub_menu.jsp"%>
+<%-- <%@ include file="/admin/sub_menu.jsp"%> --%>
 
 <article>
 <h1>상품리스트</h1>	
 <form name="frm" method="post">
-<table>
+<table style="float:right;">
   <tr>
-  <td width="642">
+  <td>
       상품명 
      <input type="text" name="key">
      <input class="btn btn-outline-dark btn-sm" type="button" name="btn_search" value="검색" onClick="go_search()">
@@ -17,9 +17,10 @@
   </td>
   </tr>
 </table>
-<table id="productList">
+<!-- <table id="productList"> -->
+<table class="table table-bordered">
     <tr>
-        <th>번호</th><th>상품명</th><th>원가</th><th>판매가</th><th>등록일</th><th>사용유무</th>
+        <th style="font-size: 14px;">번호</th><th style="font-size: 14px;">상품명</th><th style="font-size: 14px;">원가</th><th style="font-size: 14px;">판매가</th><th style="font-size: 14px;">등록일</th><th style="font-size: 14px;">사용유무</th>
     </tr>
     <c:choose>
     <c:when test="${productListSize<=0}">
@@ -32,16 +33,17 @@
 	<c:otherwise>
 	<c:forEach items="${productList}" var="productVO">
     <tr>
-      <td height="23" align="center" >${productVO.pnum}</td>
-      <td style="text-align: left; padding-left: 50px; padding-right: 0px;">   
+      <td height="23" align="center" width=10%>${productVO.pnum}</td>
+      <!-- <td style="text-align: left; padding-left: 50px; padding-right: 0px;">  -->
+      <td align="center" width=35%>  
         <a href="#" onClick="go_detail('${tpage}', '${productVO.pnum}')">
     	 ${productVO.pname}     
    		</a>
    	  </td>
-      <td><fmt:formatNumber value="${productVO.price1}"/></td>
-      <td><fmt:formatNumber value="${productVO.price2}"/></td>
-      <td><fmt:formatDate value="${productVO.indate}"/></td>
-      <td>
+      <td width=15%><fmt:formatNumber value="${productVO.price1}"/></td>
+      <td width=15%><fmt:formatNumber value="${productVO.price2}"/></td>
+      <td width=15%><fmt:formatDate value="${productVO.indate}"/></td>
+      <td width=10%>
       	<c:choose>
    	 		<c:when test='${productVO.puseyn=="1"}'>미사용</c:when>
    	 		<c:otherwise>사용</c:otherwise>   	 		
