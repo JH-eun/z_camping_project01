@@ -23,7 +23,7 @@ public class OrderDAO {
 	}
 
 	public int insertOrder(ArrayList<CartVO> cartList, String id) {
-		int maxOnum = 0;
+		int maxOnum = 1;
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -37,7 +37,7 @@ public class OrderDAO {
 			rs = pstmt.executeQuery();
 
 			if (rs.next()) {
-				maxOnum = rs.getInt(1);
+				maxOnum += rs.getInt(1) ;
 			}
 			pstmt.close();
 
@@ -69,13 +69,14 @@ public class OrderDAO {
 					+ "pnum, quantity) values(camp_order_detail_seq.nextval, ?,?,?)";
 
 			pstmt = conn.prepareStatement(insertOrderDetail);
+			//pstmt.setInt(1, maxOnum);
 			pstmt.setInt(1, maxOnum);
 			pstmt.setInt(2, cartVO.getPnum());
 			pstmt.setInt(3, cartVO.getQuantity());
 			pstmt.executeUpdate();
 			pstmt.close();
 
-			String updateCartResult = "update camp_cart set result=2 where cnum=?";
+			String updateCartResult = "update camp_cart set result='2' where cnum=?";
 			pstmt = conn.prepareStatement(updateCartResult);
 			pstmt.setInt(1, cartVO.getCnum());
 			pstmt.executeUpdate();
