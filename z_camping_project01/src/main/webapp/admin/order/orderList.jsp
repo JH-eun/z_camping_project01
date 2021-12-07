@@ -11,7 +11,7 @@
 			}
 		}else{
 			for(var i=0; i<document.frm.result.length; i++){
-				if(document.frm.reseult[i].checked == true){
+				if(document.frm.result[i].checked == true){
 					count++;
 				}
 			}
