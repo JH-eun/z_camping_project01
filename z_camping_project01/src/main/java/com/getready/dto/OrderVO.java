@@ -96,6 +96,14 @@ public class OrderVO {
 		this.result = result;
 	}
 	
+	@Override
+	public String toString() {
+		return "OrderVO [odseq=" + odnum + ", oseq=" + onum + ", id=" + id
+				+ ", indate=" + indate + ", mname=" + mname + ", zipNum=" + postal_code
+				+ ", address=" + address + ", phone=" + phone + ", pseq=" + pnum
+				+ ", pname=" + pname + ", quantity=" + quantity + ", price2="
+				+ price2 + ", result=" + result + "]";
+	}
 	
 	
 }

@@ -41,7 +41,7 @@ public class OrderDAO {
 			}
 			pstmt.close();
 
-			String insertOrder = "insert into camp_orders(onum, id) values(" + "orders_seq.nextval, ?)";
+			String insertOrder = "insert into camp_orders(onum, id) values(" + "camp_orders_seq.nextval, ?)";
 			pstmt = conn.prepareStatement(insertOrder);
 			pstmt.setString(1, id);
 			pstmt.executeUpdate();
@@ -65,8 +65,8 @@ public class OrderDAO {
 		try {
 			conn = DBManager.getConnection();
 
-			String insertOrderDetail = "insert into camp_order_detail(odnu, onum, "
-					+ "pnum, quantity) values(order_detail_seq.nextval, ?,?,?)";
+			String insertOrderDetail = "insert into camp_order_detail(odnum, onum, "
+					+ "pnum, quantity) values(camp_order_detail_seq.nextval, ?,?,?)";
 
 			pstmt = conn.prepareStatement(insertOrderDetail);
 			pstmt.setInt(1, maxOnum);
@@ -88,8 +88,10 @@ public class OrderDAO {
 
 	public ArrayList<OrderVO> listOrderById(String id, String result, int onum) {
 		ArrayList<OrderVO> orderList = new ArrayList<OrderVO>();
-		String sql = "select * from order_view where id=? and result like '%||?||%' and onum=?";
+//		String sql = "select * from order_view where id=? and result like '%||?||%' and onum=?";
 
+		String sql = "select * from order_view where id=? "
+				+ "and result like '%'||?||'%' and onum=?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -102,22 +104,40 @@ public class OrderDAO {
 			pstmt.setInt(3, onum);
 			rs = pstmt.executeQuery();
 
+//			while (rs.next()) {
+//				OrderVO orderVO = new OrderVO();
+//				orderVO.setOdnum(rs.getInt("odnum"));
+//				orderVO.setOnum(rs.getInt("onum"));
+//				orderVO.setId(rs.getString("id"));
+//				orderVO.setIndate(rs.getTimestamp("indate"));
+//				orderVO.setMname(rs.getString("name"));
+//				orderVO.setPostal_code(rs.getString("postal_code"));
+//				orderVO.setAddress(rs.getString("address"));
+//				orderVO.setPhone(rs.getString("phone"));
+//				orderVO.setPnum(rs.getInt("pnum"));
+//				orderVO.setQuantity(rs.getInt("quantity"));
+//				orderVO.setPname(rs.getString("pname"));
+//				orderVO.setPrice2(rs.getInt("price2"));
+//				orderVO.setResult(rs.getString("result"));
+//				orderList.add(orderVO);
+//			}
 			while (rs.next()) {
 				OrderVO orderVO = new OrderVO();
-				orderVO.setOdnum(rs.getInt("odnum"));
-				orderVO.setOnum(rs.getInt("onum"));
-				orderVO.setId(rs.getString("id"));
-				orderVO.setIndate(rs.getTimestamp("indate"));
-				orderVO.setMname(rs.getString("mname"));
-				orderVO.setPostal_code(rs.getString("postal_code"));
-				orderVO.setAddress(rs.getString("address"));
-				orderVO.setPhone(rs.getString("phone"));
-				orderVO.setPnum(rs.getInt("pnum"));
-				orderVO.setQuantity(rs.getInt("quantity"));
-				orderVO.setPname(rs.getString("pname"));
-				orderVO.setPrice2(rs.getInt("price2"));
-				orderVO.setResult(rs.getString("result"));
+				orderVO.setOdnum(rs.getInt(1));
+				orderVO.setOnum(rs.getInt(2));
+				orderVO.setId(rs.getString(3));
+				orderVO.setIndate(rs.getTimestamp(4));
+				orderVO.setMname(rs.getString(5));
+				orderVO.setPostal_code(rs.getString(6));
+				orderVO.setAddress(rs.getString(7));
+				orderVO.setPhone(rs.getString(8));
+				orderVO.setPnum(rs.getInt(9));
+				orderVO.setPname(rs.getString(10));
+				orderVO.setQuantity(rs.getInt(11));
+				orderVO.setPrice2(rs.getInt(12));
+				orderVO.setResult(rs.getString(13));
 				orderList.add(orderVO);
+//				System.out.println(orderVO);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -129,8 +149,10 @@ public class OrderDAO {
 
 	public ArrayList<Integer> selectNumOrdering(String id) {
 		ArrayList<Integer> onumList = new ArrayList<Integer>();
-		String sql = "select distinct onum from order_view where id=? and result='1' order by onum desc";
+//		String sql = "select distinct onum from order_view where id=? and result='1' order by onum desc";
 
+		String sql = "select distinct onum from order_view "
+				+ "where id=? and result='1' order by onum desc";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -157,7 +179,7 @@ public class OrderDAO {
 	 */
 	public ArrayList<OrderVO> listOrder(String member_name) {
 		ArrayList<OrderVO> orderList = new ArrayList<OrderVO>();
-		String sql = "select * from order_view where mname like '%'||?||'%'" + "order by result, onum desc";
+		String sql = "select * from order_view where name like '%'||?||'%'" + "order by result, onum desc";
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -177,14 +199,14 @@ public class OrderDAO {
 				orderVO.setOdnum(rs.getInt("odnum"));
 				orderVO.setOnum(rs.getInt("onum"));
 				orderVO.setId(rs.getString("id"));
-				orderVO.setPnum(rs.getInt("pnum"));
-				orderVO.setMname(rs.getString("mname"));
-				orderVO.setPname(rs.getString("pname"));
-				orderVO.setQuantity(rs.getInt("quantity"));
+				orderVO.setIndate(rs.getTimestamp("indate"));
+				orderVO.setMname(rs.getString("name"));
 				orderVO.setPostal_code(rs.getString("postal_code"));
 				orderVO.setAddress(rs.getString("address"));
 				orderVO.setPhone(rs.getString("phone"));
-				orderVO.setIndate(rs.getTimestamp("indate"));
+				orderVO.setPnum(rs.getInt("pnum"));
+				orderVO.setPname(rs.getString("pname"));
+				orderVO.setQuantity(rs.getInt("quantity"));
 				orderVO.setPrice2(rs.getInt("price2"));
 				orderVO.setResult(rs.getString("result"));
 				orderList.add(orderVO);
