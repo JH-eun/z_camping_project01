@@ -26,7 +26,9 @@ public class OrderListAction implements Action{
 			url = "GetReadyServlet?command=login_form";
 		}else {
 			OrderDAO orderDAO = OrderDAO.getInstance();
+			
 			int onum = Integer.parseInt(request.getParameter("onum"));
+			
 			ArrayList<OrderVO> orderList = orderDAO.listOrderById(loginUser.getId(), "1", onum);
 			
 			int totalPrice = 0;

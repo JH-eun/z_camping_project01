@@ -26,6 +26,7 @@ public class QnaListAction implements Action {
 			url = "GetReadyServlet?command=login_form";
 		}else {
 			QnaDAO qnaDAO = QnaDAO.getInstance();
+			
 			ArrayList<QnaVO> qnaList = qnaDAO.listQna(loginUser.getId());
 			request.setAttribute("qnaList", qnaList);
 		}
