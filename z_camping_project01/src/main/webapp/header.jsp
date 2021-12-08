@@ -68,7 +68,7 @@ function findAddr() {
 				<li><a href="GetReadyServlet?command=contract">JOIN</a></li>
 				</c:when>
 				<c:otherwise>
-				<li style="color:orange">${sessionScope.loginUser.name }(${sessionScope.loginUser.id})</li>
+				<li style="font-family: Comic Sans MS, Verdana;color:orange">${sessionScope.loginUser.name }(${sessionScope.loginUser.id})</li>
 				<li><a href="GetReadyServlet?command=logout">LOGOUT</a></li>
 				</c:otherwise>
 				</c:choose>
