@@ -98,23 +98,6 @@ nav#top_menu a:hover{
     background-position:bottom;
 }
 
-article h1, div h1 {
-	font-family: "Times New Roman", Times, serif;
-	font-size: 45px;
-	color: #CCC;
-	margin: 20px 0;
-	font-weight: normal;
-}
-
-article h2, div h2{
-	font-family: "Times New Roman", Times, serif;
-	font-size: 30px; 
-	color: #CCC;
-	padding-bottom: 15px;
-	border-bottom: 1px dotted #666; /* 제목 하단 부에 점선을 넣어 제목이라는 것을 표시해 줍니다. */	
-}
-
-
 #bestProduct{
     border:solid 1px #FFFFFF;
     border-radius:10px;
@@ -242,6 +225,31 @@ article {
 	line-height: 1.5em; 
 }
 
+article h1, div h1 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 45px;
+	color: #CCC;
+	margin: 20px 0;
+	font-weight: normal;
+}
+
+/* article h2, div h2{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px; 
+	color: #CCC;
+	padding-bottom: 15px;
+	border-bottom: 1px dotted #666; 제목 하단 부에 점선을 넣어 제목이라는 것을 표시해 줍니다.	
+} */
+#table1{
+	/* float: left; */
+	text-align:left;
+	/* margin-bottom: 10px; */
+}
+
+.table-bordered td{
+	text-align:left;
+}
+
 article p {
 	padding-left: 10px;
 }
@@ -302,6 +310,7 @@ form input {
 	margin: 5px 0; /* label과 마찬가지로 여기도 동일하게 상하로 간격을 줍니다. */
 	border: 1px solid #999; /* input 박스의 테두리 모양을 정의해 줍니다. */
 	background-color: #FCFDEA; /* 배경색을 이용하여 바탕화면 색과 차별을 줍니다. */
+	text-align: left;
 }
 
 form input.id {
@@ -320,7 +329,7 @@ form input.dup {
 	background-image: url(../images/dup.jpg);
 	/* 백그라운드 이미지를 사용합니다. */
 	background-repeat: repeat-x; /* 백그라운드 이미지를 x축으로 반복 */
-	background-position: center center; /* 백그라운드 이미지의 위치를 중앙으로 위치 */
+	/* background-position: center center; 백그라운드 이미지의 위치를 중앙으로 위치 */
 }
 
 form #buttons {
@@ -334,7 +343,7 @@ form  .submit,form  .cancel {
 	border-radius: 5px; /* border-radius를 통해 버튼을 둥그렇게 만듭니다. */
 	font-size: 14px; /* 글꼴 사이즈를 조절합니다. */
 	background-repeat: repeat-x;
-	background-position: center center;
+	/* background-position: center center; */
 	color:  black;
 	margin: 0 0 0 20px;
 }

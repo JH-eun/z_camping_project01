@@ -7,9 +7,43 @@
 <head>
 <meta charset="UTF-8">
 <title>GET READY</title>
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script> -->
 <link href="css/shopping.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="member/member.js"></script>
 <script type="text/javascript" src="mypage/mypage.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+// 사용할 function명 적어주기
+function findAddr() {
+	daum.postcode.load(function() {
+		new daum.Postcode({
+			oncomplete: function(data){
+				// 각 주소의 규칙에 따라 주소 조합
+				// 가져올 변수가 없을때는 공백을 가지기 때문에 이를 참고해 분기한다고 한다
+				var addr = ''; //주소 변수
+				
+				
+				// 사용자가 선택한 주소타입(도로명/지번)에 따라 해당 값 가져오기
+				// 만약 사용자가 도로명 주소를 선택했을 때
+				if (data.userSelectedType == 'R') {
+					addr = data.roadAddress;
+				// 만약 사용자가 구주소를 선택했을 때
+				} else {
+					addr = data.jibunaddress;
+				}
+				
+				// 우편번호
+				document.getElementById('userZipcode').value = data.zonecode;
+				// 주소정보
+				document.getElementById('userAddress').value = addr;
+				}
+		}).open();
+	});
+}
+</script>
 </head>
 
 <body>
