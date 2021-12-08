@@ -30,8 +30,6 @@ public class ActionFactory {
 			action = new JoinFormAction();
 		} else if (command.equals("id_check_form")) {
 			action = new IdCheckFormAction();
-		} else if (command.equals("find_postal_code")) {
-			action = new FindPostalCodeAction();
 		} else if (command.equals("join")) {
 			action = new JoinAction();
 		} else if (command.equals("login_form")) {
