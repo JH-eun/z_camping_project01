@@ -9,16 +9,16 @@
 	<hr>
 	<br>
 	<form id="join" action="GetReadyServlet?command=join" method="post" name="formm">
-		<h3>기본정보</h3>
+		<h5>기본정보</h5>
 		<table class="table table-bordered" style="text-align: left;">
 			<tr>
-				<td>아이디</td>
+				<td style="vertical-align: center;">아이디</td>
 				<td><input type="text" name="id" >
 				<input type="hidden" name="reid">
-				<input type="button" value="중복 체크" class="dup" onclick="idcheck()"></td>
+				<input class="btn btn-success" style="width:70px; height: 30px; font-size: 12px;" type="button" value="중복 체크" onclick="idcheck()"></td>
 			</tr>
 			<tr>
-				<td>비밀번호</td>
+				<td style="vertical-align: center;">비밀번호</td>
 				<td><input type="password" name="pwd"></td>
 			</tr>
 			<tr>
@@ -42,7 +42,7 @@
 			<tr>
 				<td rowspan="3">주소</td>
 				<td><input type="text" name="addressName" id="userZipcode" readonly>
-                    <input type="button" value="주소 검색" onclick="findAddr()">
+                    <input class="btn btn-success" style="width:70px; height: 30px; font-size: 12px;" type="button" value="주소 검색" onclick="findAddr()">
                 </td>
             </tr>
             <tr>
@@ -50,6 +50,10 @@
             </tr>
             <tr>
             	<td><input type="text" name="addressName2" size="50" placeholder="상세 주소를 입력하세요"></td>
+            </tr>
+            <tr>
+            	<td>전화번호</td>
+            	<td><input type="text" name="phone"></td>
             </tr>
 		</table>
 		
