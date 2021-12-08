@@ -248,6 +248,8 @@ article h1, div h1 {
 
 .table-bordered td{
 	text-align:left;
+	font-size: 12px;
+	
 }
 
 article p {

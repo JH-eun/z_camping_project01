@@ -9,11 +9,11 @@
 	<hr>
 	<br>
 	<form id="join" action="GetReadyServlet?command=join" method="post" name="formm">
-		<h4>기본정보</h4>
+		<h3>기본정보</h3>
 		<table class="table table-bordered" style="text-align: left;">
 			<tr>
-				<td >아이디</td>
-				<td ><input type="text" name="id" >
+				<td>아이디</td>
+				<td><input type="text" name="id" >
 				<input type="hidden" name="reid">
 				<input type="button" value="중복 체크" class="dup" onclick="idcheck()"></td>
 			</tr>
@@ -41,19 +41,20 @@
 			</tr>
 			<tr>
 				<td rowspan="3">주소</td>
-				<td><input type="text" name="addressName" readonly>
+				<td><input type="text" name="addressName" id="userZipcode" readonly>
                     <input type="button" value="주소 검색" onclick="findAddr()">
                 </td>
             </tr>
             <tr>
-            	<td><input type="text" name="addressName1" size="50"readonly></td>
+            	<td><input type="text" name="addressName1" id="userAddress" size="50"readonly></td>
             </tr>
             <tr>
             	<td><input type="text" name="addressName2" size="50" placeholder="상세 주소를 입력하세요"></td>
+            </tr>
 		</table>
 		
-		<fieldset>
-			<!-- <legend>Basic Info</legend> -->
+		<!-- <fieldset>
+			<legend>Basic Info</legend>
 			<label>ID</label>
 			<input type="text" name="id">
 			<input type="hidden" name="reid">
@@ -78,7 +79,7 @@
 						<option value="gmail">gmail.com</option>
 						<option value="nate">nate.com</option>
 					</select><br>
-		</fieldset>
+		</fieldset> -->
 		
 		<!-- <div class="form-group row">
 				<label class="col-sm-2"> 주소 </label>
