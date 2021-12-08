@@ -81,8 +81,7 @@ public class MemberDAO {
 	
 	public int inserMember(MemberVO memberVO) {
 		int result = 0;
-		String sql = "insert into camp_member(id, pwd, name, postal_code,";
-		sql += " address, phone) values(?,?,?,?,?,?)";
+		String sql = "insert into camp_member(id, pwd, name, email, postal_code, address, phone) values(?,?,?,?,?,?,?)";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -93,9 +92,10 @@ public class MemberDAO {
 			pstmt.setString(1, memberVO.getId());
 			pstmt.setString(2, memberVO.getPwd());
 			pstmt.setString(3, memberVO.getName());
-			pstmt.setString(4, memberVO.getPostal_code());
-			pstmt.setString(5, memberVO.getAddress());
-			pstmt.setString(6, memberVO.getPhone());
+			pstmt.setString(4, memberVO.getEmail());
+			pstmt.setString(5, memberVO.getPostal_code());
+			pstmt.setString(6, memberVO.getAddress());
+			pstmt.setString(7, memberVO.getPhone());
 			result = pstmt.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();

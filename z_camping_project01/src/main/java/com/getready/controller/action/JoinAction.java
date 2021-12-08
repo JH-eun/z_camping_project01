@@ -24,9 +24,9 @@ public class JoinAction implements Action{
 		memberVO.setId(request.getParameter("id"));
 		memberVO.setPwd(request.getParameter("pwd"));
 		memberVO.setName(request.getParameter("name"));
-		memberVO.setEmail(request.getParameter("email"));
-		memberVO.setPostal_code(request.getParameter("postal_code"));
-		memberVO.setAddress(request.getParameter("addr1") + request.getParameter("addr2"));
+		memberVO.setEmail(request.getParameter("email") + "@" + request.getParameter("emails"));
+		memberVO.setPostal_code(request.getParameter("addressName")); //postal_code
+		memberVO.setAddress(request.getParameter("addressName1") + " " + request.getParameter("addressName2"));
 		memberVO.setPhone(request.getParameter("phone"));
 		
 		session.setAttribute("id", request.getParameter("id"));
