@@ -251,6 +251,9 @@ article h1, div h1 {
 	text-align:left;
 	font-size: 12px;
 	vertical-align: center;
+	height: 60px;
+	margin: auto;
+	padding: auto;
 }
 
 article p {
@@ -311,7 +314,7 @@ form label {
 }
 
 form input {
-	margin: 5px 0; /* label과 마찬가지로 여기도 동일하게 상하로 간격을 줍니다. */
+	margin: 6px 0; /* label과 마찬가지로 여기도 동일하게 상하로 간격을 줍니다. */
 	border: 1px solid #999; /* input 박스의 테두리 모양을 정의해 줍니다. */
 	/* background-color: #FCFDEA; */ /* 배경색을 이용하여 바탕화면 색과 차별을 줍니다. */
 	text-align: left;

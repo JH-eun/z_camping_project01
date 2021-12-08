@@ -47,3 +47,28 @@ function go_next(){
 		alert("약관에 동의하셔야만 합니다.");
 	}
 }
+/*
+function check_onclick(){
+	for(var i=0; i<document.formm.length;i++){
+		document.formm.elements[i].checked=true;
+	}
+}
+
+function clear_onclick(){
+	for(var i=0;i<document.formm.length;i++){
+		document.formm.elements[i].checked=false;
+	}
+}
+*/
+function allcheck_onclick() {
+	if (document.formm.agree1.checked == false) {
+		for (var i = 0; i < document.formm.length; i++) {
+			document.formm.elements[i].checked = true;
+		}
+	} else {
+		for (var i = 0; i < document.formm.length; i++) {
+			document.formm.elements[i].checked = false;
+		}
+	}
+
+}
