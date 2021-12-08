@@ -17,12 +17,13 @@ function go_cart_delete(){
 		}
 	}
 	for(var i=0; i<document.formm.cnum.length ; i++){
-		alert("" + document.formm.cnum[i].checked);
+		
 		if(document.formm.cnum[i].checked == true){
 			count++;
-			alert("" + count);
 		}
 	}
+	alert("" + count + "개의 주문이 삭제 되었습니다.");
+	
 	if(count == 0){
 		alert("삭제할 항목을 선택해 주세요");
 	}else{
