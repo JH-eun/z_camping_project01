@@ -17,7 +17,7 @@
 						<c:forEach items="${cartList }" var="cartVO">
 							<tr>
 								<td>
-									<a href="GetReadyServlet?command=product_detail&pnum=${cartVO.pnum }"><h3>${cartVO.pname }</h3></a></td>
+									<a href="GetReadyServlet?command=product_detail&pnum=${cartVO.pnum }">${cartVO.pname }</a></td>
 								<td>${cartVO.quantity }</td>
 								<td><fmt:formatNumber value="${cartVO.price2 * cartVO.quantity }" type="currency" /></td>
 								<td><fmt:formatDate value="${cartVO.indate }" type="date" /></td>
@@ -25,10 +25,10 @@
 							</tr>
 						</c:forEach>
 						
-						<tr>
-							<th colspan="2"> Total price </th>
-							<th colspan="2"><fmt:formatNumber value="${totalPrice }" type="currency" /><br></th>
-							<th><a href="#" onclick="go_cart_delete()"><h3>삭제하기</h3></a></th>
+						<tr style="border-top: 1px solid black">
+							<td colspan="2"> Total price </td>
+							<td colspan="2"><fmt:formatNumber value="${totalPrice }" type="currency" /><br></td>
+							<td><a href="#" onclick="go_cart_delete()">삭제하기</a></td>
 						</tr>
 					</table>
 				</c:otherwise>
@@ -36,9 +36,9 @@
 		
 			<div class="clear"></div>
 			<div id="button" style="float: right">
-				<input type="button" value="쇼핑 계속하기" class="cancel" onclick="location.href='GetReadyServlet?command=index'">
+				<input type="button" value="쇼핑 계속하기" class="btn btn-outline-success btn-sm" style="width:120px;" onclick="location.href='GetReadyServlet?command=index'">
 				<c:if test="${cartList.size() !=0 }">
-				<input type="button" value="주문하기" class="submit" onclick="go_order_insert()">
+				<input type="button" value="주문하기" class="btn btn-outline-success btn-sm" style="width:100px;" onclick="go_order_insert()">
 				</c:if>
 			</div>
 		</form>

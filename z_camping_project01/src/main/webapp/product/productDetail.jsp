@@ -13,7 +13,7 @@
 					<span style="float: left;">
 						<img src="product_images/${productVO.image }"/>
 					</span>
-					<h2 style="font-family:verdana">${productVO.pname }</h2>
+					${productVO.pname }
 				</a>
 				<label> 가  격 : </label>
 				<p> ${productVO.price2} 원</p>

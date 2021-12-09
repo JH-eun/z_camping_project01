@@ -15,7 +15,7 @@
 				<td style="padding-left: 20px; padding-top: 20px;">아이디</td>
 				<td ><input type="text" name="id" size="50" >
 				<input type="hidden" name="reid">
-				<input class="btn btn-success" style="width:70px; height: 30px; font-size: 12px;" type="button" value="중복 체크" onclick="idcheck()"></td>
+				<input class="btn btn-outline-success" style="width:75px; height: 30px; font-size: 12px;" type="button" value="중복 체크" onclick="idcheck()"></td>
 			</tr>
 			<tr>
 				<td style="padding-top: 20px; padding-left: 20px;">비밀번호</td>
@@ -42,7 +42,7 @@
 			<tr>
 				<td style="padding-left: 20px;" rowspan="3">주소</td>
 				<td><input type="text" name="addressName" id="userZipcode" readonly>
-                    <input class="btn btn-success" style="width:70px; height: 30px; font-size: 12px;"  type="button" value="주소 검색" onclick="findAddr()">
+                    <input class="btn btn-outline-success" style="width:75px; height: 30px; font-size: 12px;"  type="button" value="주소 검색" onclick="findAddr()">
                 </td>
             </tr>
             <tr>
@@ -60,16 +60,17 @@
 		<h5>전체 동의</h5>
 		<table class="table table-bordered" style="text-align: left; width:940px;">
 			<tr>
-				<td style="padding-left: 20px; padding-top: 20px;"><input type="checkbox" name="allcheck" onClick="allcheck_onclick()">  
+				<td style="padding-left: 20px; padding-top: 20px;">
+				<input type="checkbox" name="allcheck" onClick="allcheck_onclick()">  
 				이용약관 및 개인정보 수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</td>
 			</tr>
 			<tr>
 				<td style="padding-left: 20px;">
 					[필수] 이용약관 동의<br><br>
-					<textarea rows="15" cols="100">
-					제 1조 (목적)
-					이 이용약관(이하 '약관')은 주식회사 GetReady(이하 회사) 와 이용 고객(이하 '회원')간에 회사가 제공하는 서비스 의 가입조건 및 
-					이용에 관한 다음의 제반 사항과 기타 기본적인 사 항을 구체적으로 규정함을 목적으로 합니다.
+					<textarea rows="3" cols="140">
+제 1조 (목적)
+이 이용약관(이하 '약관')은 주식회사 GetReady(이하 회사) 와 이용 고객(이하 '회원')간에 회사가 제공하는 서비스 의 가입조건 및 
+이용에 관한 다음의 제반 사항과 기타 기본적인 사 항을 구체적으로 규정함을 목적으로 합니다.
 					
 					</textarea><br>
 					이용약관에 동의하십니까? <input type="checkbox" name="agree1"> 동의함
@@ -79,10 +80,10 @@
 			<tr>
 				<td style="padding-left: 20px;">
 					[필수] 개인정보 수집 및 이용 동의<br><br>
-					<textarea rows="15" cols="100">
-					제 1조 (목적)
-					이 이용약관(이하 '약관')은 주식회사 GetReady(이하 회사) 와 이용 고객(이하 '회원')간에 회사가 제공하는 서비스 의 가입조건 및 
-					이용에 관한 다음의 제반 사항과 기타 기본적인 사 항을 구체적으로 규정함을 목적으로 합니다.
+					<textarea rows="3" cols="140">
+제 1조 (목적)
+이 이용약관(이하 '약관')은 주식회사 GetReady(이하 회사) 와 이용 고객(이하 '회원')간에 회사가 제공하는 서비스 의 가입조건 및 
+이용에 관한 다음의 제반 사항과 기타 기본적인 사 항을 구체적으로 규정함을 목적으로 합니다.
 					
 					</textarea><br>
 					개인정보 수집 및 이용에 동의하십니까? <input type="checkbox" name="agree2"> 동의함
@@ -91,10 +92,10 @@
 			<tr>
 				<td style="padding-left: 20px;">
 					[선택] 개인정보 제3자 제공 동의<br><br>	
-					<textarea rows="15" cols="100">
-					제 1조 (목적)
-					이 이용약관(이하 '약관')은 주식회사 GetReady(이하 회사) 와 이용 고객(이하 '회원')간에 회사가 제공하는 서비스 의 가입조건 및 
-					이용에 관한 다음의 제반 사항과 기타 기본적인 사 항을 구체적으로 규정함을 목적으로 합니다.
+					<textarea rows="3" cols="140">
+제 1조 (목적)
+이 이용약관(이하 '약관')은 주식회사 GetReady(이하 회사) 와 이용 고객(이하 '회원')간에 회사가 제공하는 서비스 의 가입조건 및 
+이용에 관한 다음의 제반 사항과 기타 기본적인 사 항을 구체적으로 규정함을 목적으로 합니다.
 					
 					</textarea><br>
 					개인정보 제3자 제공에 동의하십니까? <input type="checkbox" name="agree3"> 동의함
@@ -103,10 +104,10 @@
 			<tr>
 				<td style="padding-left: 20px;">
 					[선택] 쇼핑정보 수신 동의<br><br>
-					<textarea rows="15" cols="100">
-					제 1조 (목적)
-					이 이용약관(이하 '약관')은 주식회사 GetReady(이하 회사) 와 이용 고객(이하 '회원')간에 회사가 제공하는 서비스 의 가입조건 및 
-					이용에 관한 다음의 제반 사항과 기타 기본적인 사 항을 구체적으로 규정함을 목적으로 합니다.
+					<textarea rows="3" cols="140">
+제 1조 (목적)
+이 이용약관(이하 '약관')은 주식회사 GetReady(이하 회사) 와 이용 고객(이하 '회원')간에 회사가 제공하는 서비스 의 가입조건 및 
+이용에 관한 다음의 제반 사항과 기타 기본적인 사 항을 구체적으로 규정함을 목적으로 합니다.
 					
 					</textarea><br>
 					이메일 수신을 동의하십니까? <input type="checkbox" name="agree4"> 동의함
@@ -166,8 +167,8 @@
 		</fieldset> -->
 		<div class="clear"></div>
 		<div id="button" style="text-align: center;">
-			<input type="button" value="회원가입" class="submit" onclick="go_save()">
-			<input type="reset" value="취소" class="cancel">
+			<input type="button" value="회원가입" class="btn btn-outline-success btn-sm" style="width:100px; margin-left: 250px;" onclick="go_save()">&nbsp;
+			<input type="reset" value="취소" class="btn btn-outline-success btn-sm" style="width:100px;">
 		</div>
 	</form>
 </div>

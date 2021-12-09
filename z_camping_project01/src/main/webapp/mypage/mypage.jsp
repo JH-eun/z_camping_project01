@@ -3,7 +3,7 @@
 <%@ include file="../header.jsp" %>
 <%@ include file="sub_menu.jsp" %>
 	<article>
-		<h2> My Page(${title })</h2>
+		<h2> My Page<span style="font-size:20px;">(${title })</span></h2>
 		<form name="formm" method = "post">
 			<table id="cartList">
 			<tr>
@@ -22,7 +22,7 @@
 			
 			<div class="clear"></div>
 			<div id="buttons" style="float: right;">
-				<input type="button" value="쇼핑계속하기" class="cancel" onclick="location.href='GetReadyServlet?command=index'">
+				<input type="button" value="쇼핑계속하기" class="btn btn-outline-success btn-sm" style="width:120px;" onclick="location.href='GetReadyServlet?command=index'">
 			</div>
 		</form>
 	</article>

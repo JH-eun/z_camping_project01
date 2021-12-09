@@ -9,9 +9,11 @@
 		05391 서울특별시 중랑구 망우로 319 4층 명진빌딩 (상봉동)<br>
 		Contact us : getready@gmail.com<br> 
 		Copyright 2021 ©  GetReady Inc. All rights reserved.
+	<a style="color: black;" href="GetReadyServlet?command=admin_login_form">ADMIN</a>
 	</div>
+	
 </footer>
-<a style="color: black;" href="GetReadyServlet?command=admin_login_form">ADMIN</a>
+
 <!-- footer end -->
 </div>
 </body>

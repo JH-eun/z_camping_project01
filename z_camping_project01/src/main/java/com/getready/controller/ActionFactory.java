@@ -24,8 +24,6 @@ public class ActionFactory {
 			action = new ProductDetailAction();
 		} else if (command.equals("catagory")) {
 			action = new ProductKindAction();
-		} else if (command.equals("contract")) {
-			action = new ContractAction();
 		} else if (command.equals("join_form")) {
 			action = new JoinFormAction();
 		} else if (command.equals("id_check_form")) {

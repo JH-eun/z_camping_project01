@@ -44,6 +44,16 @@ function findAddr() {
 	});
 }
 </script>
+<style>
+a{	
+    text-decoration:none;
+    color: black;
+}
+a:hover{
+	text-decoration:none;
+    color: yellowgreen;
+}
+</style>
 </head>
 
 <body>
@@ -51,11 +61,11 @@ function findAddr() {
 	<!-- header -->
 	<header>
 		<!-- logo -->
-		<div id="logo">
+		<!-- <div id="logo">
 			<a href="GetReadyServlet?command=index">
 				<img src="images/img_logo.jpeg" width="180" height="100" alt="getready">
 			</a>
-		</div>
+		</div> -->
 		<!-- logo end -->
 		<nav id="catagory_menu">
 			<ul>
@@ -65,10 +75,10 @@ function findAddr() {
 				<a href="GetReadyServlet?command=login_form">LOGIN</a>
 				</li>
 				<li></li>
-				<li><a href="GetReadyServlet?command=contract">JOIN</a></li>
+				<li><a href="GetReadyServlet?command=join_form">JOIN</a></li>
 				</c:when>
 				<c:otherwise>
-				<li style="font-family: Comic Sans MS, Verdana;color:orange">${sessionScope.loginUser.name }(${sessionScope.loginUser.id})</li>
+				<li style="font-family: Comic Sans MS, Verdana;color:orange">${sessionScope.loginUser.name }(${sessionScope.loginUser.id})&nbsp;&nbsp;&nbsp;</li>
 				<li><a href="GetReadyServlet?command=logout">LOGOUT</a></li>
 				</c:otherwise>
 				</c:choose>
@@ -81,7 +91,7 @@ function findAddr() {
 			</ul>
 		</nav>
 		
-		<nav id="top_menu">
+		<!-- <nav id="top_menu">
 			<ul >
 				<li><a href="GetReadyServlet?command=catagory&kind=1">텐트</a></li>
 				<li><a href="GetReadyServlet?command=catagory&kind=2">타프</a></li>
@@ -91,8 +101,26 @@ function findAddr() {
 				<li><a href="GetReadyServlet?command=catagory&kind=6">화로대/BBQ</a></li>
 				<li><a href="GetReadyServlet?command=catagory&kind=7">기타장비</a></li>
 			</ul>
-		</nav>
+		</nav> -->
+				<div class="clear"></div>
+		
+		<div>
+		<table id="top_menu" style="width:971px;"  >
+		<tr>
+			<td style="width:12.5%;"><a href="GetReadyServlet?command=index">
+				<img src="images/img_logo.jpeg" width="90" height="50" alt="getready">
+			</a></td>
+			<td style="padding-top:30px; padding-left: 20px;width:; "><a href="GetReadyServlet?command=catagory&kind=1">텐트</a></td>
+			<td style="padding-top:30px; padding-left: 20px;width:; "><a href="GetReadyServlet?command=catagory&kind=2">타프</a></td>
+			<td style="padding-top:30px; padding-left: 10px;width:; "><a href="GetReadyServlet?command=catagory&kind=3">매트/침낭</a></td>
+			<td style="padding-top:30px; width:; "><a href="GetReadyServlet?command=catagory&kind=4">코펠/버너/취사</a></td>
+			<td style="padding-top:30px; width:; "><a href="GetReadyServlet?command=catagory&kind=5">의자/테이블</a></td>
+			<td style="padding-top:30px; width:; "><a href="GetReadyServlet?command=catagory&kind=6">화로대/BBQ</a></td>
+			<td style="padding-top:30px; width:; "><a href="GetReadyServlet?command=catagory&kind=7">기타장비</a></td>
+		</tr>
+		</table>
+		</div>
 		<div class="clear"></div>
-		<hr>
+		<hr style="margin-top:0;">
 	</header>
 <!-- header end-->

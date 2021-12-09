@@ -19,11 +19,11 @@ public class IndexAction implements Action{
 		String url = "/index.jsp";
 		
 		ProductDAO productDAO = ProductDAO.getInstance();
-		ArrayList<ProductVO> newProductList = productDAO.listNewProduct();
-		ArrayList<ProductVO> bestProductList = productDAO.listBestProduct();
+//		ArrayList<ProductVO> newProductList = productDAO.listNewProduct();
+//		ArrayList<ProductVO> bestProductList = productDAO.listBestProduct();
 		
-		request.setAttribute("newProductList", newProductList);
-		request.setAttribute("bestProductList", bestProductList);
+//		request.setAttribute("newProductList", newProductList);
+//		request.setAttribute("bestProductList", bestProductList);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);

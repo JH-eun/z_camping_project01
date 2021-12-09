@@ -39,7 +39,7 @@
 			</table>
 			<div class="clear"></div>
 			<div id="buttons" style="float: right">
-				<input type="button" value="쇼핑 계속하기" class="cancel" onclick="location.href='GetReadyServlet?command=index'">
+				<input type="button" value="쇼핑 계속하기" class="btn btn-outline-success btn-sm" style="width:120px;" onclick="location.href='GetReadyServlet?command=index'">
 			</div>
 		</form>
 	</article>

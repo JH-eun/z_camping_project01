@@ -3,8 +3,9 @@ body{
     margin:0;
     padding:0;
     font-size:0.75em;
-    font-family: Comic Sans MS, Verdana;
+    font-family: Comic Sans MS,굴림;
 }
+
 
 #wrap{
     width:971px; /* 각 웹 페이지 크기에 맞게 사이즈 조정 */
@@ -46,6 +47,11 @@ table#cartList th, td{
 	vertical-align: center;
 }
 
+nav#cartList a:hover{
+    color: red;
+    font-weight: bold;
+    font-family: Comic Sans MS, verdana;
+}
 nav#catagory_menu ul{
     list-style:none; 
 }
@@ -64,14 +70,19 @@ nav#catagory_menu a{
     text-align: center;
     color: black;
     font-weight: bold;
+    font-family: Comic Sans MS, verdana;
 }
 
 nav#catagory_menu a:hover{
     color: #F90;
     font-weight: bold;
+    font-family: Comic Sans MS, verdana;
 }
 
-nav#top_menu{
+/* nav#top_menu{
+    margin: 20px 0;
+    float:right;
+   margin: 20px 50px 0 20px;
     margin: 20px 0;
     float:right;
 }
@@ -82,19 +93,18 @@ nav#top_menu ul{
 }
 nav#top_menu ul li{
    float:left;
-   margin:0 15px;  
-   font-size: 14pt; 
-}
+   margin:0 0 5px 0;  
+   font-size: 15px; 
+   font-family: Comic Sans MS,verdana;
 
-nav#top_menu a{
-	display:block; 
-    height:20px;
+}
+*/
+tabel#top_menu a{	
     text-decoration:none;
     color: black;
-    padding: 10px;
 }
 
-nav#top_menu a:hover{
+table#top_menu a:hover{
     background-image:url(../images/purple.gif);
     background-repeat:repeat-x;
     background-position:bottom;
@@ -142,7 +152,7 @@ a{
     text-decoration:none;
 }
 a:hover{
-    color:#F90;
+    color: green;
     text-decoration:underline;
 }
 
@@ -155,15 +165,13 @@ a:hover{
 footer {
 	margin:10px 0 0 0;
 	height:50px;
-	background-image: url(../images/under_logo.gif);
-	background-repeat: no-repeat;
-	background-position: 40px center;	
 }
 
 footer #copy {
-	margin: 20px 0 10px 300px;
+	margin: -10px 0 -10px 300px;
 	width:600px;	
 	float:left;	
+	font-size:12px;
 }
 
 #main_img{
@@ -200,22 +208,20 @@ div#front{
 	text-decoration: none;
 	color: black; 
 	/* font-family: Arial, Helvetica, sans-serif; */
-	font-weight:bold; font-size:16px;
+	font-size:16px;
 	display: block;
-	height: 15px;
+	height: 30px;
 	width: 160px;
 	padding: 7px;
 	border-bottom: 1px dotted #999;
-	background-image: url(../images/bullet.gif);
-	background-repeat: no-repeat;
-	background-position: right center;
 }
 
 #sub_menu a:hover {
 	background-image: url(../images/bullet_orange.gif);
 	background-repeat: no-repeat; 
 	background-position: right center;
-	color: #F90;font-weight:bold; font-size:16px;
+	color: yellowgreen;
+	font-size:16px;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -307,9 +313,9 @@ form fieldset {
 }
 
 form fieldset legend {
-	font-size: 20px; /* 제목으로 사용되기 때문에 크기를 크게 잡아 줍니다. */
+	font-size: 18px; /* 제목으로 사용되기 때문에 크기를 크게 잡아 줍니다. */
 	border-bottom: 1px dotted #666; /* 제목 하단 부에 점선을 넣어 제목이라는 것을 표시해 줍니다. */
-	width: 600px; /* 전체 크기를 잡아 줍니다. */
+	width: 360px; /* 전체 크기를 잡아 줍니다. */
 	padding: 5px 0; /* 위와 아래로 여백을 주고 좌우로는 여백을 없애버립니다. 
                                       여백을 안 주게 되면 밑줄과 너무 붙어버려 보기에 좋지 않습니다. */
 }
@@ -347,7 +353,7 @@ form input.dup {
 }
 
 form #buttons {
-	margin: 20px 0 0 0;
+	margin: 20px 0 0 85px;
 }
 
 form  .submit,form  .cancel {
@@ -362,10 +368,10 @@ form  .submit,form  .cancel {
 	margin: 0 0 0 20px;
 }
 
-form  .submit {
+/* form  .submit {
 	background-image: url(../images/submit_back.jpg);
 }
 
 form  .cancel {
 	background-image: url(../images/cancel_back.jpg);	
-}
+} */

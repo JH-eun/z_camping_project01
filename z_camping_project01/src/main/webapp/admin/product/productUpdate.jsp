@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/admin/header.jsp" %>
-<%@ include file="/admin/sub_menu.jsp" %>
+<%-- <%@ include file="/admin/sub_menu.jsp" %> --%>
 
 <article>
 <h1>상품수정</h1>
@@ -25,6 +25,12 @@
 						</c:choose>
 					</c:forEach>
 				</select>
+			</td>
+		</tr>
+		<tr>
+			<th>상품명</th>
+			<td width="343" colspan="5">
+				<input type="text" name="pname" size="47" maxlength="100" value="${productVO.pname }">
 			</td>
 		</tr>
 		<tr>
@@ -81,7 +87,7 @@
 			</td>
 		</tr>
 	</table>
-	<input class="btn btn-outline-dark btn-sm" type="button" value="수정" onClick="go_moc_save('${tpage}','${productVO.pnum }')">
+	<input class="btn btn-outline-dark btn-sm" type="button" value="수정" onClick="go_mod_save('${tpage}','${productVO.pnum }')">
 	<input class="btn btn-outline-dark btn-sm" type="button" value="취소" onClick="go_mov()">
 </form>
 </article>

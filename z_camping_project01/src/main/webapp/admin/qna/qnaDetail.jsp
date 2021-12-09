@@ -24,15 +24,15 @@
 	<table class="table table-bordered" style="margin-left:150px; width: 80%;">
 		<tr>
 			<th style="width:20%; font-size:14px;">제목</th>
-			<td>${qnaVO.subject } ${qnaVO.rep }</td>
+			<td style="text-align: left;">${qnaVO.subject } ${qnaVO.rep }</td>
 		</tr>
 		<tr>
 			<th style="width:20%; font-size:14px;">등록일</th>
-			<td><fmt:formatDate value="${qnaVO.indate }"/></td>
+			<td style="text-align: left;"><fmt:formatDate value="${qnaVO.indate }"/></td>
 		</tr>
 		<tr>
 			<th style="width:20%; font-size:14px;">내용</th>
-			<td>${qnaVO.content }</td>
+			<td style="text-align: left;">${qnaVO.content }</td>
 		</tr>
 	</table>
 	<c:choose>
@@ -40,14 +40,10 @@
 		<!-- <table id="orderList"> -->
 		<table class="table table-bordered" style="margin-left:150px; width: 80%;">
 			<tr>
+				<th style="width:20%; font-size:14px;">답변</th>
 				<td colspan="2">
-					<img src="admin/images/opinionimg01.gif">
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<textarea name="reply" rows="3" cols="50"></textarea>
-					<input type="button" class="btn btn-outline-dark btn-sm" value="저장" onClick="go_rep('${qnaVO.qnanum}')">
+					<textarea name="reply" rows="10" cols="95"></textarea>
+					
 				</td>
 			</tr>
 		</table>
@@ -63,6 +59,7 @@
 			</table>
 		</c:otherwise>
 	</c:choose>
+	<input type="button" class="btn btn-outline-dark btn-sm" value="저장" onClick="go_rep('${qnaVO.qnanum}')">
 	<input type="button" class="btn btn-outline-dark btn-sm" value="목록" onClick="go_list()">
 </form>
 </article>
