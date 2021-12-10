@@ -6,8 +6,8 @@
 		<h2> Cart List</h2>
 		<form name="formm" method="post">
 			<c:choose>
-				<c:when test="${cartList.size() == 0 }">
-					<h3 style="color:red;text-align: center; font-family:verdana;"> 장바구니가 비었습니다.</h3>
+				<c:when test="${cartList.size() == 0 }"><br>
+					<h5 style="color:red;text-align: center; font-family:verdana;"> 장바구니가 비었습니다.</h5>
 				</c:when>
 				<c:otherwise>
 					<table id="cartList">

@@ -42,7 +42,7 @@
 			<tr>
 				<th style="width:20%; font-size:14px;">답변</th>
 				<td colspan="2">
-					<textarea name="reply" rows="10" cols="95"></textarea>
+					<textarea name="reply" rows="10" cols="140"></textarea>
 					
 				</td>
 			</tr>

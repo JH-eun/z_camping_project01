@@ -186,8 +186,8 @@ public class ProductDAO {
 		return total_pages;
 	}
 	
-	static int view_rows = 5;
-	static int counts = 5;
+	static int view_rows = 15;
+	static int counts = 15;
 	
 	//페이지 이동을 위한 메소드
 	public String pageNumber(int tpage, String name) {
