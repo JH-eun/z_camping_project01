@@ -14,7 +14,7 @@
 				<td><fmt:formatDate value="${orderVO.indate }" type="date" /></td>
 				<td>${orderVO.onum }</td>
 				<td>${orderVO.pname }</td>
-				<td><fmt:formatNumber value="${orderVO.price2 }" type="currency" /></td>
+				<td><fmt:formatNumber value="${orderVO.price2 }" type="number" />원</td>
 				<td><a href="GetReadyServlet?command=order_detail&onum=${orderVO.onum }">조회</a></td>
 			</tr>
 			</c:forEach>

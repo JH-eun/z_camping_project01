@@ -6,24 +6,23 @@
 <head>
 <meta charset="UTF-8">
 <title>아이디 중복 체크</title>
-<link href="css/subpage.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <style type="text/css">
 body{
-	background-color:#B96DB5;
+	background-color:white;
 	font-family: verdana;
 }
 #wrap{
 	margin: 0 20px;
 }
 h1{
-	font-family: "Times New Roman", Times, serif;
-	font-size: 45px;
-	color: #CCC;
+	font-family: verdana;
+	color: black;
 	font-weight: normal;
 }
-input[type=button], input[type=submit]{
-	float: right;
-}
+/* input[type=button], input[type=submit]{
+	float: left;
+} */
 </style>
 <script type="text/javascript">
 	function idok(){
@@ -37,20 +36,21 @@ input[type=button], input[type=submit]{
 	<div id="wrap">
 		<h1>ID 중복 확인</h1>
 		<form method="post" name="formm" style="margin-right: 0;" action="GetReadyServlet?command=id_check_form">
-			User ID <input type="text" name="id" value="">
-						<input type="submit" value="검색" class="submit"><br>
-						<div style="margin-top: 20px">
-							<c:if test="${message == 1 }">
-								<script type="text/javascript">
-									opener.document.formm.id.value="";
-								</script>
-								${id }는 이미 사용중인 아이디입니다.
-							</c:if>
-							<c:if test="${message == -1 }">
-								${id }는 사용 가능한 ID 입니다.
-								<input type="button" value="사용" class="cancel" onclick="idok()">
-							</c:if>	
-						</div>
+			User ID 
+			<input type="text" name="id" value="">
+			<input type="submit" value="검색" class="btn btn-outline-success btn-sm" style="width:100px; "><br>
+				<div style="margin-top: 10px">
+					<c:if test="${message == 1 }">
+						<script type="text/javascript">
+							opener.document.formm.id.value="";
+						</script>
+						${id }는 이미 사용중인 아이디입니다.
+					</c:if>
+					<c:if test="${message == -1 }">
+						${id }는 사용 가능한 ID 입니다.
+						<input type="button" value="사용" class="btn btn-outline-success btn-sm" style="width:100px;" onclick="idok()">
+					</c:if>	
+				</div>
 		</form>
 	</div>
 </body>

@@ -207,6 +207,12 @@ footer #copy {
 
 #main_img {
 	text-align: center;
+	
+}
+
+.slide{
+	width: 728px;
+	height : 410px;
 }
 
 #main_img img {

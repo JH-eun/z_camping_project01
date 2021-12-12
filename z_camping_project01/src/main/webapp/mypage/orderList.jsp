@@ -11,22 +11,22 @@
 			</tr>
 			<c:forEach items="${orderList }" var="orderVO">
 			<tr>
-				<td><a href="GetReadyServlet?command=product_detail&pnum=${cartVO.pnum }"><h3>${orderVO.pname }</h3></a></td>
+				<td><a href="GetReadyServlet?command=product_detail&pnum=${cartVO.pnum }">${orderVO.pname }</a></td>
 				<td>${orderVO.quantity }</td>
-				<td><fmt:formatNumber value="${orderVO.price2 * orderVO.quantity }" type="currency" /></td>
+				<td><fmt:formatNumber value="${orderVO.price2 * orderVO.quantity }" type="number" />원</td>
 				<td><fmt:formatDate value="${orderVO.indate }" type="date" /></td>
 				<td> 처리 진행 중 </td>
 			</tr>
 			</c:forEach>
 			<tr>
 				<th colspan="2"> 총 액 </th>
-				<th colspan="2"><fmt:formatNumber value="${totalprice }" type="currency" /><br></th>
+				<th colspan="2"><fmt:formatNumber value="${totalPrice }" type="number" />원<br></th>
 				<th> 주문 처리가 완료되었습니다. </th>
 			</tr>
 			</table>
 			<div class="clear"></div>
 			<div id="buttons" style="float: right;">
-				<input type="button" value="쇼핑 계속하기" class="cancel" onclick="location.href='GetReadyServlet?command=index'">
+				<input type="button" value="쇼핑 계속하기" class="btn btn-outline-success btn-sm" style="width:120px; " onclick="location.href='GetReadyServlet?command=index'">
 			</div>
 		</form>
 	</article>

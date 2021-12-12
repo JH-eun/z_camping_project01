@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/admin/header.jsp" %>
-<%-- <%@ include file="/admin/sub_menu.jsp" %> --%>
 
 <article>
 <h1>상품수정</h1>
@@ -9,10 +8,10 @@
 	<input type="hidden" name="pnum" value="${productVO.pnum }">
 	<input type="hidden" name="code">
 	<input type="hidden" name="nonmakeImg" value="${productVO.image }">
-	<table id="list">
+	<table class="table table-bordered" style="margin-left:150px; width: 80%;">
 		<tr>
-			<th>상품분류</th>
-			<td colspan="5">
+			<th width=15% style="font-size: 14px;">상품분류</th>
+			<td colspan="5" style="text-align:left;">
 				<select name="kind">
 					<c:forEach items="${kindList }" var="kind" varStatus="status">
 						<c:choose>
@@ -28,27 +27,27 @@
 			</td>
 		</tr>
 		<tr>
-			<th>상품명</th>
-			<td width="343" colspan="5">
-				<input type="text" name="pname" size="47" maxlength="100" value="${productVO.pname }">
+			<th align="center" style="font-size: 14px;">상품명</th>
+			<td colspan="5"  style="text-align:left;">
+				<input type="text" name="pname" size="100" maxlength="100" value="${productVO.pname }">
 			</td>
 		</tr>
 		<tr>
-			<th>원가[A]</th>
-			<td width="70">
-				<input type="text" name="price1" size="11" onKeyUp='NumFormat(this)' value="${productVO.price1 }">
+			<th style="font-size: 14px; width=15%;">원가[A]</th>
+			<td width="18%">
+				<input type="text" name="price1" size="28" onKeyUp='NumFormat(this)' value="${productVO.price1 }">
 			</td>
-			<th>판매가[B]</th>
-			<td width="70">
-				<input type="text" name="price2" size="11" onBlur="go_ab()" onKeyUp='NumFormat(this)' value="${productVO.price2 }">
+			<th style="font-size: 14px; width=15%;">판매가[B]</th>
+			<td width="18%">
+				<input type="text" name="price2" size="28" onBlur="go_ab()" onKeyUp='NumFormat(this)' value="${productVO.price2 }">
 			</td>
-			<th>[B-A]</th>
-			<td width="72">
-				<input type="text" name="price3" size="11" readonly onKeyUp='NumFormat(this)'>
+			<th style="font-size: 14px; width=15%;">[B-A]</th>
+			<td width="18%">
+				<input type="text" name="price3" size="28" readonly onKeyUp='NumFormat(this)'>
 			</td>
 		</tr>
 		<tr>
-			<th>베스트상품</th>
+			<th style="font-size: 14px; width=15%;">베스트상품</th>
 			<td>
 				<c:choose>
 					<c:when test='${productVO.bestyn=="y"}'>
@@ -59,7 +58,7 @@
 					</c:otherwise>
 				</c:choose>
 			</td>
-			<th>사용유무</th>
+			<th style="font-size: 14px; width=15%;">사용유무</th>
 			<td>
 				<c:choose>
 					<c:when test='${productVO.puseyn=="y" }'>
@@ -71,15 +70,15 @@
 				</c:choose>
 			</td>
 		<tr>
-			<th>상세설명</th>
+			<th style="font-size: 14px; width=15%;">상세설명</th>
 			<td colspan="5">
-				<textarea name="content" rows="8" cols="70">
-					${productVO.content }
+				<textarea name="content" rows="20" cols="150">
+${productVO.content }
 				</textarea>
 			</td>
 		</tr>
 		<tr>
-			<th>상품이미지</th>
+			<th style="font-size: 14px; width=15%;">상품이미지</th>
 			<td colspan="5">
 				<img src="product_images/${productVO.image }" width="200pt">
 				<br>

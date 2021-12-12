@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/admin/header.jsp" %>
-<%-- <%@ include file="/admin/sub_menu.jsp" %> --%>
 
 <article>
 <h1>상품 상세 보기</h1>

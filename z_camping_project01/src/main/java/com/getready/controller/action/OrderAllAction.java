@@ -26,7 +26,7 @@ public class OrderAllAction implements Action {
 			url = "GetReadyServlet?command=login_form";
 		}else {
 			OrderDAO orderDAO = OrderDAO.getInstance();
-			ArrayList<Integer> onumList = orderDAO.selectNumOrdering(loginUser.getId());
+			ArrayList<Integer> onumList = orderDAO.selectAllNumOrdering(loginUser.getId());
 			ArrayList<OrderVO> orderList = new ArrayList<OrderVO>();
 			
 			for(int onum : onumList) {

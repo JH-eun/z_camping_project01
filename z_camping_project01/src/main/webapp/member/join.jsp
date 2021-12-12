@@ -117,54 +117,6 @@
 			
 		</table>
 		
-		<!-- <fieldset>
-			<legend>Basic Info</legend>
-			<label>ID</label>
-			<input type="text" name="id">
-			<input type="hidden" name="reid">
-			<input type="button" value="중복 체크" class="dup" onclick="idcheck()"><br>
-			<label>비밀번호</label>
-			<input type="password" name="pwd"><br>
-			<label>비밀번호확인</label>
-			<input type="password" name="pwdCheck"><br>
-			<label>이름</label>
-			<input type="text" name="name"><br>
-			<label>주소</label>
-			<input type="text" name="addressName" id="userZipcode" readonly class='box' />
-                        <input type="button" value="주소 검색" onclick="findAddr()"><br>
-         	<label></label>
-         	<input type="text" name="addressName1" id="userAddress" size="50" readonly class='box' /> <br>
-         	<label></label>
-         	<input type="text" name="addressName2" class="form-control" placeholder="상세 주소를 입력하세요" size="50"/> <br>
-			<label>E-Mail</label>
-			<input type="text" name="email">@
-					<select name="emails" id="emails">
-						<option value="naver">naver.com</option>
-						<option value="gmail">gmail.com</option>
-						<option value="nate">nate.com</option>
-					</select><br>
-		</fieldset> -->
-		
-		<!-- <div class="form-group row">
-				<label class="col-sm-2"> 주소 </label>
-				<div class="col-sm-5">
-					<input type="text" name="addressName" id="userZipcode" placeholder="우편번호 입력" readonly class='box' />
-                        <input type="button" value="주소 검색" onclick="findAddr()"><br>
-					<input type="text" name="addressName1" id="userAddress" placeholder="주소를 입력" readonly class='box' /> <br>
-					<input type="text" name="addressName2" class="form-control" placeholder="상세 주소를 입력하세요"/> <br>
-				</div>
-			</div> -->
-		<!-- <fieldset>
-			<legend>Optional</legend>
-			<label>Postal Code</label>
-			<input type="text" name="postal_code" size="10">
-			<input type="button" value="주소 찾기" class="dup" onclick="postal_code()"><br>
-			<label>Address</label>
-			<input type="text" name="add1" size="50">
-			<input type="text" name="add2" size="25"><br>
-			<label>Phone Number</label>
-			<input type="text" name="phone"><br>
-		</fieldset> -->
 		<div class="clear"></div>
 		<div id="button" style="text-align: center;">
 			<input type="button" value="회원가입" class="btn btn-outline-success btn-sm" style="width:100px; margin-left: 250px;" onclick="go_save()">&nbsp;

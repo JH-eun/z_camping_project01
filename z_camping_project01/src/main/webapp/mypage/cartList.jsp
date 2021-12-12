@@ -19,7 +19,7 @@
 								<td>
 									<a href="GetReadyServlet?command=product_detail&pnum=${cartVO.pnum }">${cartVO.pname }</a></td>
 								<td>${cartVO.quantity }</td>
-								<td><fmt:formatNumber value="${cartVO.price2 * cartVO.quantity }" type="currency" /></td>
+								<td><fmt:formatNumber value="${cartVO.price2 * cartVO.quantity }" type="number" />원</td>
 								<td><fmt:formatDate value="${cartVO.indate }" type="date" /></td>
 								<td><input type="checkbox" name="cnum" value="${cartVO.cnum }"></td>
 							</tr>
@@ -27,7 +27,7 @@
 						
 						<tr style="border-top: 1px solid black">
 							<td colspan="2"> Total price </td>
-							<td colspan="2"><fmt:formatNumber value="${totalPrice }" type="currency" /><br></td>
+							<td colspan="2"><fmt:formatNumber value="${totalPrice }" type="number" />원<br></td>
 							<td><a href="#" onclick="go_cart_delete()">삭제하기</a></td>
 						</tr>
 					</table>

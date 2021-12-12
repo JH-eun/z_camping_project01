@@ -14,7 +14,7 @@
 					<td><fmt:formatDate value="${orderDetail.indate }" type="date" /></td>
 					<td>${orderDetail.onum }</td>
 					<td>${orderDetail.mname }</td>
-					<td><fmt:formatNumber type="currency" value="${totalPrice }" /></td>
+					<td><fmt:formatNumber type="number" value="${totalPrice }" />원</td>
 				</tr>
 			</table>
 			<h3>주문 상품 정보</h3>
@@ -27,7 +27,7 @@
 					<td>${orderVO.pname }</td>
 					<td>${orderVO.odnum }</td>
 					<td>${orderVO.quantity }</td>
-					<td><fmt:formatNumber type="currency" value="${orderVO.price2 * orderVO.quantity }" /></td>
+					<td><fmt:formatNumber type="number" value="${orderVO.price2 * orderVO.quantity }" />원</td>
 					<td>
 						<c:choose>
 						<c:when test='${orderVO.result=="1" }'>진행중</c:when>

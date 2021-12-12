@@ -105,23 +105,6 @@ public class OrderDAO {
 			pstmt.setInt(3, onum);
 			rs = pstmt.executeQuery();
 
-//			while (rs.next()) {
-//				OrderVO orderVO = new OrderVO();
-//				orderVO.setOdnum(rs.getInt("odnum"));
-//				orderVO.setOnum(rs.getInt("onum"));
-//				orderVO.setId(rs.getString("id"));
-//				orderVO.setIndate(rs.getTimestamp("indate"));
-//				orderVO.setMname(rs.getString("name"));
-//				orderVO.setPostal_code(rs.getString("postal_code"));
-//				orderVO.setAddress(rs.getString("address"));
-//				orderVO.setPhone(rs.getString("phone"));
-//				orderVO.setPnum(rs.getInt("pnum"));
-//				orderVO.setQuantity(rs.getInt("quantity"));
-//				orderVO.setPname(rs.getString("pname"));
-//				orderVO.setPrice2(rs.getInt("price2"));
-//				orderVO.setResult(rs.getString("result"));
-//				orderList.add(orderVO);
-//			}
 			while (rs.next()) {
 				OrderVO orderVO = new OrderVO();
 				orderVO.setOdnum(rs.getInt(1));
@@ -154,6 +137,33 @@ public class OrderDAO {
 
 		String sql = "select distinct onum from order_view "
 				+ "where id=? and result='1' order by onum desc";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				onumList.add(rs.getInt(1));
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+		return onumList;
+	}
+
+	public ArrayList<Integer> selectAllNumOrdering(String id) {
+		ArrayList<Integer> onumList = new ArrayList<Integer>();
+//		String sql = "select distinct onum from order_view where id=? and result='1' order by onum desc";
+
+		String sql = "select distinct onum from order_view "
+				+ "where id=? and result='2' order by onum desc";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;

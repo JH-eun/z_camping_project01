@@ -6,10 +6,10 @@
 <article>
 <h1>상품등록</h1>
 <form name="frm" method="post" enctype="multipart/form-data">
-	<table id="list">
+	<table class="table table-bordered" style="margin-left:150px; width: 80%;">
 		<tr>
-			<th>상품분류</th>
-			<td colspan="5">
+			<th width=15% style="font-size: 14px;">상품분류</th>
+			<td colspan="5" style="text-align:left;">
 				<select name="kind">
 					<c:forEach items="${kindList }" var="kind" varStatus="status">
 						<option value="${status.count }">${kind }</option>
@@ -18,35 +18,35 @@
 			</td>
 		</tr>
 		<tr>
-			<th>상품명</th>
-			<td width="343" colspan="5">
-				<input type="text" name="pname" size="47" maxlength="100">
+			<th align="center" style="font-size: 14px;">상품명</th>
+			<td colspan="5" style="text-align:left;">
+				<input type="text" name="pname" size="100" maxlength="100">
 			</td>
 		</tr>
 		<tr>
-			<th>원가[A]</th>
-			<td width="70">
-				<input type="text" name="price1" size="11" onKeyUp='NumFormat(this)'>
+			<th style="font-size: 14px; width=15%;">원가[A]</th>
+			<td width="18%">
+				<input type="text" name="price1" size="28" onKeyUp='NumFormat(this)'>
 			</td>
-			<th> 판매가[B]</th>
-			<td width="70">
-				<input type="text" name="price2" size="11" onBlur="go_ab()" onKeyUp='NumFormat(this)'>
+			<th style="font-size: 14px; width=15%;"> 판매가[B]</th>
+			<td width="18%">
+				<input type="text" name="price2" size="28" onBlur="go_ab()" onKeyUp='NumFormat(this)'>
 			</td>
-			<th>[B-A]</th>
-				<td width="72">
-					<input type="text" name="price3" size="11" readonly onKeyUp='NumFormat(this)'>
+			<th style="font-size: 14px; width=15%;">[B-A]</th>
+				<td width="18%">
+					<input type="text" name="price3" size="28" readonly onKeyUp='NumFormat(this)'>
 				</td>
 		</tr>
 		<tr>
-			<th>상세설명</th>
+			<th style="font-size: 14px;">상세설명</th>
 			<td colspan="5">
-				<textarea name="content" rows="8" cols="70"></textarea>
+				<textarea name="content" rows="20" cols="150"></textarea>
 			</td>
 		</tr>
 		<tr>
-			<th>상품이미지</th>
+			<th style="font-size: 14px;">상품이미지</th>
 			<td width="343" colspan="5">
-				<input type="file" name="image">
+				<input type="file" name="image" style="float:left;">
 			</td>
 		</tr>
 	</table>
