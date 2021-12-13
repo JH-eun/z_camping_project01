@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/admin/header.jsp" %>
-<%-- <%@ include file="/admin/sub_menu.jsp" %> --%>
 <script type="text/javascript">
 	function go_view(qnanum){
 		var theForm = document.frm;
@@ -15,7 +14,6 @@
 <h1>Q&amp;A 리스트</h1>
 <form name="frm" method="post">
 	<input type="hidden" name="qnanum">
-	<!-- <table id="orderList"> -->
 	<table class="table table-bordered">
 		<tr>
 			<th style="font-size: 14px;">번호(답변여부)</th><th style="font-size: 14px;">제목</th><th style="font-size: 14px;">작성자</th><th style="font-size: 14px;">작성일</th>

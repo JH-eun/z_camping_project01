@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>
 <%@ include file="/admin/header.jsp"%>
-<%-- <%@ include file="/admin/sub_menu.jsp"%> --%>
 
 <article>
 <h1>상품리스트</h1>	
@@ -17,7 +16,6 @@
   </td>
   </tr>
 </table>
-<!-- <table id="productList"> -->
 <table class="table table-bordered">
     <tr>
         <th style="font-size: 14px;">번호</th><th style="font-size: 14px;">상품명</th><th style="font-size: 14px;">원가</th><th style="font-size: 14px;">판매가</th><th style="font-size: 14px;">등록일</th><th style="font-size: 14px;">사용유무</th>
@@ -34,7 +32,6 @@
 	<c:forEach items="${productList}" var="productVO">
     <tr>
       <td height="23" align="center" width=10%>${productVO.pnum}</td>
-      <!-- <td style="text-align: left; padding-left: 50px; padding-right: 0px;">  -->
       <td align="center" width=35%>  
         <a href="#" onClick="go_detail('${tpage}', '${productVO.pnum}')">
     	 ${productVO.pname}     

@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/admin/header.jsp" %>
-<%-- <%@ include file="/admin/sub_menu.jsp" %> --%>
 <script type="text/javascript">
 	function go_search()
 	{
@@ -21,7 +20,6 @@
 			</tr>
 		</table>
 		<br>
-		<!-- <table id="orderList"> -->
 		<table class="table table-bordered">
 			<tr>
 				<th style="font-size: 14px;">아이디(탈퇴여부)</th><th style="font-size: 14px;">이름</th>

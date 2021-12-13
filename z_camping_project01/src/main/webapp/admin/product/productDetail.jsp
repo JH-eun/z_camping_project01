@@ -5,7 +5,6 @@
 <article>
 <h1>상품 상세 보기</h1>
 <form name="frm" method="post">
-<!-- <table id="list"> -->
 <table class="table table-bordered" style="margin-left:150px; width: 80%;">
 	<tr>
 		<th width=15% style="font-size: 14px;">상품분류</th>

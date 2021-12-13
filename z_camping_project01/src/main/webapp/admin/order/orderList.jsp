@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/admin/header.jsp" %>    
-<%-- <%@ include file="/admin/sub_menu.jsp" %> --%>
 <script type="text/javascript">
 	function go_order_save(){
 		var count = 0;
@@ -35,7 +34,6 @@
 			</tr>
 		</table>
 		<br>
-		<!-- <table id="orderList"> -->
 		<table class="table table-bordered">
 			<tr>
 				<th style="font-size: 14px;">주문처리(처리여부)</th><th style="font-size: 14px;">주문자</th><th style="font-size: 14px;">상품명</th><th>수량</th>

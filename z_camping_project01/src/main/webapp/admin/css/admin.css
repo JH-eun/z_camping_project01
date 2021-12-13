@@ -70,43 +70,6 @@ nav#top_menu a:hover{
     background-position:bottom;
 }
 
-/* nav#top_menu {
-	float: right;
-	width: 700px;
-	margin: 50px 20px 0 0;
-} 
-
-nav#top_menu ul {
-	list-style: none;
-}
-
-nav#top_menu ul li {
-	float: left;
-	margin: 0 5px;
-}
-
-nav#top_menu ul li a {
-	display: block;
-	text-decoration: none;
-	color: #333;
-	padding: 10px;
-	font-style: normal;
-	font-size: 13px;
-}
-
-nav#top_menu ul li a:hover {
-	background-repeat: repeat-x;
-	background-position: bottom;
-	border-bottom: 2px solid gray;
-}
-
-nav#top_menu ul li a.logout {
-	margin-left: 238px;
-}
-
-nav#top_menu ul li a.logout1 {
-	margin-left: 210px;
-} */
 
 .clear {
 	clear: both;
@@ -123,22 +86,6 @@ nav#top_menu ul li a.logout1 {
 #review h1 {
 	text-align: center;
 }
-
-/* footer {
-	background-image: url("../images/under_logo.png");
-	background-repeat: no-repeat;
-	background-position: 40px center;
-	float: left;
-	min-height: 145px;
-	width: 952px;
-	margin-left: 10px;
-	margin-bottom: -100px;
-}
-
-footer hr {
-	width: 950px;
-	border: 1px solid;
-} */
 
 footer {
 	margin:10px 0 0 0;
@@ -168,25 +115,6 @@ footer #copy {
 #login a:hover {
 	color: orange;
 }
-
-/* .btn {
-	width: 100px;
-	border-radius: 5px;
-	background-color: #FC3;
-	color: #333;
-	text-decoration: none;
-	text-align: center;
-	padding: 5px;
-	margin: 0 7px 7px 0px;
-}
-
-.btn:HOVER {
-	background-color: #FFF;
-}
-
-.btn:ACTIVE {
-	box-shadow: none;
-} */
 
 article {
 	min-height: 600px;
@@ -252,10 +180,6 @@ table#orderList {
 	margin-left: 100px;
 	margin-bottom: 20px;
 }
-
-/* table#orderList th,td {
-	text-align: center;
-} */
 
 #register {
 	margin-left: 300px;

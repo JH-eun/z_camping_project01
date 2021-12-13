@@ -20,9 +20,6 @@ h1{
 	color: black;
 	font-weight: normal;
 }
-/* input[type=button], input[type=submit]{
-	float: left;
-} */
 </style>
 <script type="text/javascript">
 	function idok(){

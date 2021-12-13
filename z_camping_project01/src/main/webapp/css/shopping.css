@@ -81,26 +81,6 @@ nav#catagory_menu a:hover {
 	font-family: Comic Sans MS, verdana;
 }
 
-/* nav#top_menu{
-    margin: 20px 0;
-    float:right;
-   margin: 20px 50px 0 20px;
-    margin: 20px 0;
-    float:right;
-}
-
-nav#top_menu ul{
-    list-style:none;
-    font-family:Verdana;
-}
-nav#top_menu ul li{
-   float:left;
-   margin:0 0 5px 0;  
-   font-size: 15px; 
-   font-family: Comic Sans MS,verdana;
-
-}
-*/
 tabel#top_menu a {
 	text-decoration: none;
 	color: black;
@@ -245,7 +225,6 @@ div#front {
 #sub_menu a {
 	text-decoration: none;
 	color: black;
-	/* font-family: Arial, Helvetica, sans-serif; */
 	font-size: 16px;
 	display: block;
 	height: 30px;
@@ -280,13 +259,6 @@ article h1, div h1 {
 	font-weight: normal;
 }
 
-/* article h2, div h2{
-	font-family: "Times New Roman", Times, serif;
-	font-size: 30px; 
-	color: #CCC;
-	padding-bottom: 15px;
-	border-bottom: 1px dotted #666; 제목 하단 부에 점선을 넣어 제목이라는 것을 표시해 줍니다.	
-} */
 h2, div h2 {
 	font-family: Comic Sans MS, Verdana;
 }
@@ -333,11 +305,6 @@ article table#notice td {
 	vertical-align: center;
 }
 
-/* article table#notice tr:hover {
-	background-color: #DDF;
-	cursor: pointer;
-	color: red;
-} */
 form {
 	margin: 10px 0 0 0;
 	width: 670px;
@@ -403,11 +370,3 @@ form  .submit, form  .cancel {
 	color: black;
 	margin: 0 0 0 20px;
 }
-
-/* form  .submit {
-	background-image: url(../images/submit_back.jpg);
-}
-
-form  .cancel {
-	background-image: url(../images/cancel_back.jpg);	
-} */
